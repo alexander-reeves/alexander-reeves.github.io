@@ -24,7 +24,7 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
+    <h1><span class="mjx-math">{{ site.blog_name }}</span></h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
@@ -194,3 +194,12 @@ pagination:
 {% endif %}
 
 </div>
+
+<script>
+  // Force MathJax to reprocess the page after load
+  window.addEventListener('load', function() {
+    if (window.MathJax) {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  });
+</script>
