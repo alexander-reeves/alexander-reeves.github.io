@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
           {% if item.date %}
-            {% assign date = item.date | split: '-' | slice: 0, 2 | join: '.' %}
+            {% assign year = item.date | split: '-' | first %}
             <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-              {{ date }}
+              {{ year }}
             </span>
           {% endif %}
         </div>
