@@ -633,9 +633,9 @@ jsonresume:
   - basics
   - education
   - awards
-  - studentSupervision
-  - teaching_experience
-  - talks_and_posters
-  - collaboration memberships
+  - "student supervision"
+  - "teaching experience"
+  - "talks and posters"
+  - "collaboration memberships"
   - publications
   - references

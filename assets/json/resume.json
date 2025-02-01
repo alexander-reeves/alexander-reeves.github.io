@@ -48,7 +48,7 @@
       "summary": "Scholarships awarded for academic achievement."
     }
   ],
-  "studentSupervision": [
+  "student supervision": [
     {
       "name": "Domitille Chebat",
       "position": "Master Thesis Co-Supervisor",
@@ -78,7 +78,7 @@
       "summary": "Thesis Title: 'Weak Lensing With 21cm Intensity Mapping'"
     }
   ],
-  "teachingExperience": [
+  "teaching experience": [
     {
       "course": "Astrophysics II",
       "position": "Teaching Assistant",
@@ -98,7 +98,7 @@
       "endDate": "2023-05-01"
     }
   ],
-  "talksAndPosters": [
+  "talks and posters": [
     {
       "title": "Poster at 'Future Science with CMB x LSS'",
       "event": "Kyoto",
@@ -125,7 +125,7 @@
       "url": "https://www.youtube.com/watch?v=y7A5VPc-Eao&t=3s"
     }
   ],
-  "collaborationMemberships": [
+  "collaboration memberships": [
     "Dark Energy Spectroscopic Instrument (DESI)",
     "Legacy Survey of Space and Time - Dark Energy Science Collaboration (LSST-DESC)"
   ],
@@ -143,18 +143,32 @@
       "summary": "Contribution: leading the project and performing the computational analysis and majority of paper writing."
     },
     {
-      "name": "12×2pt Combined Probes: Pipeline, Neutrino Mass, and Data Compression",
+      "name": "12X2pt Combined Probes: Pipeline, Neutrino Mass, and Data Compression",
       "authors": "A. Reeves, A. Nicola, A. Refregier, T. Kacprzak, L.F. Machado Poletti Valle",
       "status": "Accepted in JCAP, January 2024",
       "url": "https://arxiv.org/abs/2309.03258",
       "summary": "Contribution: led the project and performed the majority of the computational analysis and subsequent writing of the paper."
     },
     {
-      "title": "Restoring Concordance with Early Dark Energy and Massive Neutrinos",
+      "name": "Restoring Concordance with Early Dark Energy and Massive Neutrinos",
       "authors": "A. Reeves, L. Herold, S. Vagnozzi, B. Sherwin, E. Ferreira",
       "status": "Accepted in MNRAS, April 2023",
       "url": "https://arxiv.org/abs/2207.01501",
       "summary": "Contribution: led the project and performed the bulk of the theoretical and computational analysis as well as subsequent writing of the paper."
+    }
+  ],
+  "references": [
+    {
+      "name": "Prof. Alexandre Refregier",
+      "position": "PhD Supervisor",
+      "institution": "ETH Zürich",
+      "email": "alexandre.refregier@phys.ethz.ch"
+    },
+    {
+      "name": "Prof. Andrina Nicola",
+      "position": "Secondary PhD Supervisor",
+      "institution": "Universität Bonn",
+      "email": "anicola@uni-bonn.de"
     }
   ]
 }

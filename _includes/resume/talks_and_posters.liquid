@@ -1,0 +1,21 @@
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for item in data[1] %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px">
+          {{ item.date | slice: 0, 4 }}
+        </div>
+        <div class="col-xs-10 cl-sm-10 col-md-10">
+          <strong>{{ item.title }}</strong>
+          <br/>{{ item.event }}
+          {% if item.summary %}
+            <br/>{{ item.summary }}
+          {% endif %}
+          {% if item.url %}
+            <br/><a href="{{ item.url }}" target="_blank">Video Link</a>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul> 

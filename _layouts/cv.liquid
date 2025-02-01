@@ -95,6 +95,14 @@ layout: default
                   {% include resume/awards.liquid %}
                 {% when 'skills' %}
                   {% include resume/skills.liquid %}
+                {% when 'student supervision' %}
+                  {% include resume/student_supervision.liquid %}
+                {% when 'teaching experience' %}
+                  {% include resume/teaching_experience.liquid %}
+                {% when 'talks and posters' %}
+                  {% include resume/talks_and_posters.liquid %}
+                {% when 'collaboration memberships' %}
+                  {% include resume/collaboration_memberships.liquid %}
                 {% when 'publications' %}
                   {% include resume/publications.liquid %}
                 {% when 'languages' %}
