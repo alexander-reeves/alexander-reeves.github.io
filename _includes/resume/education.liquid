@@ -36,17 +36,38 @@
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           <h6 class="title font-weight-bold ml-1 ml-md-4">
-            <a href="{{ content.url }}">{{ content.studyType }}</a>
+            {% if content.url %}
+              <a href="{{ content.url }}">{{ content.studyType }}</a>
+            {% else %}
+              {{ content.studyType }}
+            {% endif %}
           </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.institution }}</h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.area }}</h6>
-          <ul class="items">
-            {% for item in content.courses %}
-              <li>
-                <span class="item">{{ item }}</span>
-              </li>
-            {% endfor %}
-          </ul>
+          {% if content.score %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.score }}</h6>
+          {% endif %}
+          {% if content.summary %}
+            <p class="ml-1 ml-md-4">{{ content.summary }}</p>
+          {% endif %}
+          {% if content.highlights %}
+            <ul class="items">
+              {% for highlight in content.highlights %}
+                <li>
+                  <span class="item">{{ highlight }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if content.courses %}
+            <ul class="items">
+              {% for item in content.courses %}
+                <li>
+                  <span class="item">{{ item }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </div>
     </li>
