@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 5
 cv_pdf: Alex_CV_adademic.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+description: This is my latest CV as of 31.01.2025. Please get in touch if you would like something more up-to-date!
 toc:
   sidebar: left
 ---

@@ -1,9 +1,11 @@
-{
+"basics": [{
   "name": "Alexander Reeves",
   "contact": {
     "address": "ETH Zürich, Stefano-Franscini-Platz 5, 8093 Zurich",
     "email": "areeves@phys.ethz.ch"
+   }
   },
+],
   "education": [
     {
       "institution": "ETH Zürich",
@@ -153,7 +155,7 @@
     },
     {
       "authors": "A. Reeves, A. Nicola, A. Refregier, T. Kacprzak, L.F. Machado Poletti Valle",
-      "title": "12×2pt combined probes: pipeline, neutrino mass, and data compression",
+      "title": "12X2pt combined probes: pipeline, neutrino mass, and data compression",
       "status": "January 2024, accepted in JCAP",
       "arxiv": "arXiv:2309.03258",
       "contribution": "Led the project, performed the majority of the computational analysis and writing."
