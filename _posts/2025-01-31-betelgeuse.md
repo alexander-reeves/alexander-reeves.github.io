@@ -7,7 +7,13 @@ description: betelgeuse facts
 
 Betelgeuse, one of the brightest stars in the night sky, is a fascinating red supergiant located approximately 550-720 light-years away in the constellation of Orion. As one of Orion's shoulders, it's easy to spot - look for the distinctive reddish star in the upper left corner of the famous constellation.
 
-What makes Betelgeuse particularly exciting is its variable brightness, which you can [track in real-time through the American Association of Variable Star Observers (AAVSO)](https://www.aavso.org/LCGv2/). These dramatic variations in brightness have led to intense speculation about the star's future - Betelgeuse is near the end of its life and could go supernova at any moment. In fact, given its distance from Earth, it's possible that Betelgeuse has *already* exploded, and we're simply waiting for the light from this cosmic event to reach us! 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/betelgeuse.jpg" class="img-fluid rounded z-depth-1" caption="Betelgeuse glowing in its characteristic red hue. Credit: Franco Tognarini/Getty Images/iStock" %}
+    </div>
+</div>
+
+What makes Betelgeuse particularly exciting is its variable brightness, which you can track in real-time through [BetelBot](https://x.com/betelbot?lang=en&mx=2) (*apologies for the X link...*). These dramatic variations in brightness have led to intense speculation about the star's future - Betelgeuse is near the end of its life and could go supernova at any moment. In fact, given its distance from Earth, it's possible that Betelgeuse has *already* exploded, and we're simply waiting for the light from this cosmic event to reach us!
 
 ## Finding Betelgeuse
 
