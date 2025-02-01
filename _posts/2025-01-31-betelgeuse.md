@@ -1,11 +1,9 @@
 ---
 layout: post
-title: a post with formatting and links
+title: Betelgeuse: A Red Supergiant on the Brink
 date: 2025-01-31 23:53:16
 description: betelgeuse
 ---
-
-# Betelgeuse: A Red Supergiant on the Brink
 
 Betelgeuse, one of the brightest stars in the night sky, is a fascinating red supergiant located approximately 550-720 light-years away in the constellation of Orion. As one of Orion's shoulders, it's easy to spot - look for the distinctive reddish star in the upper left corner of the famous constellation.
 
