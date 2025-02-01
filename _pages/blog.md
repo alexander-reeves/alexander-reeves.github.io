@@ -24,7 +24,7 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
   <div class="header-bar">
     <h1>
-      <div id="blog-title">{{ site.blog_name }}</div>
+      <span id="blog-title">{{ site.blog_name }}</span>
     </h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
@@ -195,6 +195,12 @@ pagination:
 {% endif %}
 
 </div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
 
 <script type="text/javascript">
   window.addEventListener('load', function() {

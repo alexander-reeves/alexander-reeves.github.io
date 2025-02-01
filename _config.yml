@@ -131,7 +131,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: "$\\chi^2$ Blog" # Using simpler LaTeX expression for now
+blog_name: "\\(\\chi^2\\) Blog"
 blog_description: Some random thoughts about things I like.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
