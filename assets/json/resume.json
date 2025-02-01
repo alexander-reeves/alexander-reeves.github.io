@@ -1,15 +1,9 @@
 {
   "basics": {
     "name": "Alexander Reeves",
-    "label": "PhD Candidate in Cosmology",
+    "current position": "PhD Candidate in Cosmology",
     "email": "areeves@phys.ethz.ch",
-    "location": {
-      "address": "ETH Zürich, Stefano-Franscini-Platz 5",
-      "postalCode": "8093",
-      "city": "Zurich",
-      "countryCode": "CH",
-      "region": "Zurich"
-    }
+    "address": "ETH Zürich, Stefano-Franscini-Platz 5"
   },
   "education": [
     {
@@ -39,7 +33,7 @@
       "title": "Doc.Mobility Fellowship",
       "date": "2024-01-01",
       "awarder": "ETH Zürich",
-      "summary": "Awarded CHF 9100 fellowship to undertake research at the University of California, Berkeley and Lawrence Berkeley National Lab under the supervision of Simone Ferraro and Martin White."
+      "summary": "Awarded CHF 9100 fellowship to undertake research at the University of California, Berkeley and Lawrence Berkeley National Lab under the supervision of Dr. Simone Ferraro and Prof. Martin White."
     },
     {
       "title": "1st Place: International PLANCKS Theoretical Physics Competition",
@@ -53,12 +47,12 @@
       "awarder": "Downing College, University of Cambridge",
       "summary": "Scholarships awarded for academic achievement."
     },
-    {
-      "title": "British Physics Olympiad Gold Certificate",
-      "date": "2016-01-01",
-      "awarder": "Latymer Upper School",
-      "summary": "Gold (Top 50) certificate in the British Physics Olympiad."
-    }
+    // {
+    //   "title": "British Physics Olympiad Gold Certificate",
+    //   "date": "2016-01-01",
+    //   "awarder": "Latymer Upper School",
+    //   "summary": "Gold (Top 50) certificate in the British Physics Olympiad."
+    // }
   ],
   "studentSupervision": [
     {
@@ -143,19 +137,19 @@
   ],
   "publications": [
     {
-      "title": "Rapid and Differentiable Analysis Using the Effective Field Theory of Large Scale Structure",
+      "name": "Rapid and Differentiable Analysis Using the Effective Field Theory of Large Scale Structure",
       "authors": "A. Reeves, P. Zhang, H. Zheng, A. Refregier",
       "status": "In preparation, expected March 2025",
       "summary": "Contribution: concept, computational analysis, and paper writing."
     },
     {
-      "title": "Tuning the Cosmic Instrument: Robust Cosmology Through Combined Probes",
+      "name": "Tuning the Cosmic Instrument: Robust Cosmology Through Combined Probes",
       "authors": "A. Reeves, A. Nicola, A. Refregier",
       "status": "In preparation, expected February 2025",
       "summary": "Contribution: leading the project and performing the computational analysis and majority of paper writing."
     },
     {
-      "title": "12×2pt Combined Probes: Pipeline, Neutrino Mass, and Data Compression",
+      "name": "12×2pt Combined Probes: Pipeline, Neutrino Mass, and Data Compression",
       "authors": "A. Reeves, A. Nicola, A. Refregier, T. Kacprzak, L.F. Machado Poletti Valle",
       "status": "Accepted in JCAP, January 2024",
       "url": "https://arxiv.org/abs/2309.03258",
