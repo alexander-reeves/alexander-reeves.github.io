@@ -2,7 +2,7 @@
 layout: post
 title: Betelgeuse- A Red Supergiant on the Brink
 date: 2025-01-31 23:53:16
-description: betelgeuse facts
+description: Why I think Betelgeuse is cool.
 tags: [star, orion, supernova]
 ---
 
