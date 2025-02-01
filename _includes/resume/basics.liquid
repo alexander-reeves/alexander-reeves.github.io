@@ -28,8 +28,8 @@
 </table>
 
 <div class="card-text font-weight-light">
-  {% if data[1].current position %}
-    <p><strong>Current Position:</strong> {{ data[1].current position }}</p>
+  {% if data[1]["current position"] %}
+    <p><strong>Current Position:</strong> {{ data[1]["current position"] }}</p>
   {% endif %}
   {% if data[1].email %}
     <p><strong>Email:</strong> {{ data[1].email }}</p>
