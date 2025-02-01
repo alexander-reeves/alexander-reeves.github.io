@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Currently at <a href='https://cosmology.ethz.ch/'>ETH Zürich</a>. Stefano-Franscini-Platz 5, 8093 Zurich. areeves@phys.ethz.ch.
+subtitle: ETH Zürich. Stefano-Franscini-Platz 5, 8093 Zürich. areeves@phys.ethz.ch.
 
 profile:
   align: right
