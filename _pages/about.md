@@ -6,7 +6,7 @@ subtitle: Currently at <a href='https://cosmology.ethz.ch/'>ETH Zürich</a>. Ste
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile_pic.jpg
   image_circular: false # crops the image to make it circular
 
 news: false # includes a list of news items

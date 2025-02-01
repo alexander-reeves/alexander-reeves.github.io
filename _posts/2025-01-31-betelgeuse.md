@@ -9,11 +9,11 @@ Betelgeuse, one of the brightest stars in the night sky, is a fascinating red su
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/betelgeuse.jpg" class="img-fluid rounded z-depth-1" caption="Betelgeuse glowing in its characteristic red hue. Credit: Franco Tognarini/Getty Images/iStock" %}
+        {% include figure.liquid path="assets/img/betelgeuse" class="img-fluid rounded z-depth-1" zoomable=true caption="Betelgeuse glowing in its characteristic red hue. Credit: Franco Tognarini/Getty Images/iStock" %}
     </div>
 </div>
 
-What makes Betelgeuse particularly exciting is its variable brightness, which you can track in real-time through [BetelBot](https://x.com/betelbot?lang=en&mx=2) (*apologies for the X link...*). These dramatic variations in brightness have led to intense speculation about the star's future - Betelgeuse is near the end of its life and could go supernova at any moment. In fact, given its distance from Earth, it's possible that Betelgeuse has *already* exploded, and we're simply waiting for the light from this cosmic event to reach us!
+What makes Betelgeuse particularly exciting is its variable brightness, which you can track in real-time through BetelBot on X (formerly Twitter) [here](https://x.com/betelbot?lang=en&mx=2) (*apologies for the X link!*). These dramatic variations in brightness have led to intense speculation about the star's future - Betelgeuse is near the end of its life and could go supernova at any moment. In fact, given its distance from Earth, it's possible that Betelgeuse has *already* exploded, and we're simply waiting for the light from this cosmic event to reach us!
 
 ## Finding Betelgeuse
 
