@@ -6,12 +6,13 @@
           {{ item.status | slice: 0, 4 }}
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10">
-          <strong>{{ item.name }}</strong>
+          {% if item.url %}
+            <strong><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></strong>
+          {% else %}
+            <strong>{{ item.name }}</strong>
+          {% endif %}
           <br/>{{ item.authors }}
           <br/><em>{{ item.status }}</em>
-          {% if item.url %}
-            <br/><a href="{{ item.url }}" target="_blank">{{ item.url }}</a>
-          {% endif %}
           {% if item.summary %}
             <br/>{{ item.summary }}
           {% endif %}
