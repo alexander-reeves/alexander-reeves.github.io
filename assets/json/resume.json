@@ -1,11 +1,11 @@
-"basics": [{
-  "name": "Alexander Reeves",
-  "contact": {
-    "address": "ETH Zürich, Stefano-Franscini-Platz 5, 8093 Zurich",
-    "email": "areeves@phys.ethz.ch"
-   }
+{
+  "basics": {
+    "name": "Alexander Reeves",
+    "contact": {
+      "address": "ETH Zürich, Stefano-Franscini-Platz 5, 8093 Zurich",
+      "email": "areeves@phys.ethz.ch"
+    }
   },
-],
   "education": [
     {
       "institution": "ETH Zürich",
@@ -110,7 +110,7 @@
   ],
   "talks_and_posters": [
     {
-      "title": "Poster at ‘Future Science with CMB x LSS’",
+      "title": "Poster at 'Future Science with CMB x LSS'",
       "location": "Kyoto",
       "date": "March 2023",
       "notes": "Delivered a fireside talk as well as a poster based on arXiv:2309.03258"
@@ -122,13 +122,13 @@
       "notes": "Poster based on arXiv:2309.03258"
     },
     {
-      "title": "Talk at ‘Tensions in Cosmology’ conference",
+      "title": "Talk at 'Tensions in Cosmology' conference",
       "location": "Corfu",
       "date": "August 2022",
       "notes": "Delivered a 10-minute talk on results of the paper: arXiv:2207.01501"
     },
     {
-      "title": "Talk at NBI Summer school: ‘Neutrinos here there and everywhere’",
+      "title": "Talk at NBI Summer school: 'Neutrinos here there and everywhere'",
       "location": "Copenhagen",
       "date": "June 2022",
       "notes": "Delivered a 10-minute talk on results of the paper: arXiv:2207.01501. Video link: https://www.youtube.com/watch?v=y7A5VPc-Eao&t=3s"
