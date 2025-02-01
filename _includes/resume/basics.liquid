@@ -38,3 +38,16 @@
     <p><strong>Address:</strong> {{ data[1].address }}</p>
   {% endif %}
 </div>
+
+{% if content.location %}
+  <div class="row">
+    {% if content.location.address %}
+      <div class="col-sm-12">
+        {{ content.location.address }}
+      </div>
+    {% endif %}
+    <div class="col-sm-12">
+      {% if content.location.city %}{{ content.location.city }}{% endif %}{% if content.location.region %}, {{ content.location.region }}{% endif %}{% if content.location.postalCode %} {{ content.location.postalCode }}{% endif %}{% if content.location.countryCode %}, {{ content.location.countryCode }}{% endif %}
+    </div>
+  </div>
+{% endif %}
