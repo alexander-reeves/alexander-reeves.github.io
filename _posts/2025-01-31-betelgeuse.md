@@ -9,7 +9,7 @@ Betelgeuse, one of the brightest stars in the night sky, is a fascinating red su
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/betelgeuse" class="img-fluid rounded z-depth-1" zoomable=true caption="Betelgeuse glowing in its characteristic red hue. Credit: Franco Tognarini/Getty Images/iStock" %}
+        {% include figure.liquid path="assets/img/betelgeuse.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Betelgeuse glowing in its characteristic red hue. Credit: Franco Tognarini/Getty Images/iStock" %}
     </div>
 </div>
 
