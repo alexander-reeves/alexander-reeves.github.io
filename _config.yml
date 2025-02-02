@@ -2,14 +2,13 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "Alexander Reeves"   # Updated title to include your full name
+title: blank  # Updated title to include your full name
 first_name: Alexander
 middle_name: C. T.
 last_name: Reeves
 email: areeves@phys.ethz.ch
 description: >
   Alexander Reeves is a cosmologist working between theory and experiment with a focus on combined probes and computational methods.
-  <!-- This description now includes the keyword "alexander reeves" -->
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
