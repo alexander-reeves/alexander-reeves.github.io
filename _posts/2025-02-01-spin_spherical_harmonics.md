@@ -6,19 +6,19 @@ description: A deep dive into the mathematics of spin spherical harmonics and th
 tags: [math, cosmology, weak-lensing]
 ---
 
-When we look at the sky, we see various cosmic fields painted on the celestial sphere. Some of these fields are simpler than others - they're just about measuring how bright or hot something is at each point. But others have a more complex geometric nature, involving orientations and patterns that rotate with our viewing perspective. This is where the concept of "spin" comes into play in cosmology.
+When we look at the sky, we see various cosmic fields painted on the celestial sphere. Some of these fields are simpler than others - they're just about measuring how bright or hot something is at each point. But others have a more complex geometric nature, involving orientations and patterns that rotate with our viewing perspective. These are spin fields and can be decomposed into "spin-weighted spherical harmonics" that respect U(1) symmetry. These are concepts that I was introduced to early on in my PhD and I felt as though there was not a clear reference describing their mathemtical properties. Here is my attempt to formalize the maths behind these fields and show that it is really no different to what physicists are used to from quantum mechanics.
 
-## What Makes a Field "Spin"?
+## What is a "spin field"?
 
-Let's start with some familiar examples:
+The "spin" of a field is associted with how the field transforms under a rotation of coordinates. Let's start with some familiar examples:
 
-1. **Spin-0 Fields**: The simplest cosmic fields are scalar fields, which have no preferred direction. The cosmic microwave background (CMB) temperature is a perfect example - at each point on the sky, we just measure a single number representing the temperature. When we rotate our coordinate system, these measurements don't change. That's why we call the CMB temperature a spin-0 field.
+1. **Spin-0 Fields**: The simplest cosmic fields are scalar fields, which have no preferred direction. The cosmic microwave background (CMB) temperature is an example - at each point on the sky, we just measure a single number representing the temperature. When we rotate our coordinate system, these measurements don't change.
 
-2. **Spin-2 Fields**: Now consider cosmic shear from weak gravitational lensing. When we observe distant galaxies, their shapes are distorted by the gravitational effects of matter along the line of sight. This distortion has both a magnitude (how much the galaxy is stretched) and a direction (the axis along which the stretching occurs). Here's the crucial part: if we rotate our coordinate system by an angle ψ, the measured shear components transform with a factor of e^{2iψ}. This factor of 2 in the exponential is why we call it a spin-2 field.
+2. **Spin-2 Fields**: Now consider cosmic shear from weak gravitational lensing. When we observe distant galaxies, their shapes are distorted by the gravitational effects of matter along the line of sight. This distortion has both a magnitude (how much the galaxy image is distorted) and a direction (the axis along which the stretching occurs). The crucial part: if we rotate our coordinate system by an angle ψ, the measured shear components transform with a factor of e^{2iψ}. This factor of 2 in the exponential is why we call it a spin-2 field.
 
 ## Mathematical Description
 
-To describe these fields mathematically, we need spin spherical harmonics. Regular (spin-0) spherical harmonics $$Y_{lm}(\theta,\phi)$$ are familiar from quantum mechanics, but for spin-s fields, we need their generalization, $$_{s}Y_{lm}(\theta,\phi)$$.
+To describe these fields mathematically, we need spin spherical harmonics. Regular (spin-0) spherical harmonics $$Y_{lm}(\theta,\phi)$$ are a failar concept, but for spin-s fields, we need their generalization, $$_{s}Y_{lm}(\theta,\phi)$$.
 
 The spin-weighted spherical harmonics satisfy:
 $$
