@@ -16,4 +16,4 @@ social: false # includes social icons at the bottom of the page
 
 I am currently a PhD student in [Alexandre Refregier's cosmology group](https://cosmology.ethz.ch/) at ETH Zürich. I originally come from the UK and did my undergraduate and masters studies there at Downing College, Cambridge.
 
-My research focuses on data-driven approaches to cosmology, combining theoretical insights with modern computational methods.
+My research focuses on data-driven approaches to cosmology, combining theoretical insights with modern computational methods. See the full list of my [publications on InspireHEP](https://inspirehep.net/authors/1960608).
