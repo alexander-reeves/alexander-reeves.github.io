@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
+title:
 description: Materials for Alexander Reeves' teaching.
 nav: true
 nav_order: 6
