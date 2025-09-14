@@ -4,14 +4,19 @@
       <div class="row">
         <div class="col-xs-10 cl-sm-10 col-md-10">
           {% if item.url %}
-            <strong><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></strong>
+            <strong
+              ><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></strong
+            >
           {% else %}
             <strong>{{ item.name }}</strong>
           {% endif %}
-          <br/>{{ item.authors }}
-          <br/><em>{{ item.status }}</em>
+          <br>
+          {{ item.authors }}
+          <br>
+          <em>{{ item.status }}</em>
           {% if item.summary %}
-            <br/>{{ item.summary }}
+            <br>
+            {{ item.summary }}
           {% endif %}
         </div>
       </div>

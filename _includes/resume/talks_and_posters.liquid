@@ -12,15 +12,18 @@
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10">
           <strong>{{ item.title }}</strong>
-          <br/>{{ item.event }}
+          <br>
+          {{ item.event }}
           {% if item.summary %}
-            <br/>{{ item.summary }}
+            <br>
+            {{ item.summary }}
           {% endif %}
           {% if item.url %}
-            <br/><a href="{{ item.url }}" target="_blank">Video Link</a>
+            <br>
+            <a href="{{ item.url }}" target="_blank">Video Link</a>
           {% endif %}
         </div>
       </div>
     </li>
   {% endfor %}
-</ul> 
+</ul>

@@ -21,9 +21,11 @@ The "spin" of a field is associted with how the field transforms under a rotatio
 To describe these fields mathematically, we need spin spherical harmonics. Regular (spin-0) spherical harmonics $$Y_{lm}(\theta,\phi)$$ are a failar concept, but for spin-s fields, we need their generalization, $$_{s}Y_{lm}(\theta,\phi)$$.
 
 The spin-weighted spherical harmonics satisfy:
+
 $$
 \eth \,_{s}Y_{lm} = \sqrt{(l-s)(l+s+1)}\,_{s+1}Y_{lm}
 $$
+
 $$
 \bar{\eth} \,_{s}Y_{lm} = -\sqrt{(l+s)(l-s+1)}\,_{s-1}Y_{lm}
 $$
@@ -33,9 +35,11 @@ where $$\eth$$ and $$\bar{\eth}$$ are the spin-raising and spin-lowering operato
 ## The Spin Raising and Lowering Operators
 
 The explicit form of these operators in spherical coordinates is:
+
 $$
 \eth = -\sin^s\theta\left(\frac{\partial}{\partial\theta} + \frac{i}{\sin\theta}\frac{\partial}{\partial\phi}\right)\sin^{-s}\theta
 $$
+
 $$
 \bar{\eth} = -\sin^{-s}\theta\left(\frac{\partial}{\partial\theta} - \frac{i}{\sin\theta}\frac{\partial}{\partial\phi}\right)\sin^{s}\theta
 $$
@@ -61,6 +65,7 @@ $$
 $$
 
 This decomposition is crucial because:
+
 1. E-modes are created by gravitational lensing (to first order)
 2. B-modes should be zero in the absence of systematics
 3. This provides a powerful way to check for systematic errors in our measurements
@@ -68,6 +73,7 @@ This decomposition is crucial because:
 ## Visualizing Spin Fields
 
 To understand spin fields visually:
+
 - Spin-0: Think of a temperature map, where each point just has a value
 - Spin-1: Think of a vector field, like wind directions on a weather map
 - Spin-2: Think of headless vectors or ellipses, like the shapes of galaxies in a weak lensing map
@@ -81,6 +87,7 @@ To understand spin fields visually:
 ## Practical Implementation
 
 In practice, computing spin spherical harmonics involves:
+
 1. Starting with regular spherical harmonics
 2. Applying spin raising/lowering operators numerically
 3. Using recursion relations for efficiency

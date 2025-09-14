@@ -11,9 +11,11 @@
           {% endif %}
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10">
-          <strong>{{ item.title }}</strong>{% if item.awarder %}, {{ item.awarder }}{% endif %}
+          <strong>{{ item.title }}</strong>
+          {%- if item.awarder %}, {{ item.awarder }}{% endif %}
           {% if item.summary %}
-            <br/>{{ item.summary }}
+            <br>
+            {{ item.summary }}
           {% endif %}
         </div>
       </div>
