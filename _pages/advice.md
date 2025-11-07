@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /advice/
-title: advice
+title: Advice
 description: Resources and advice for young people interested in Physics in the UK
 nav: true
 nav_order: 7
