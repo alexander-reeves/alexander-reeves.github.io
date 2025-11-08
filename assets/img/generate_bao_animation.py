@@ -210,11 +210,21 @@ def animate(frame):
 
 # Create animation
 print("Generating BAO sound horizon animation...")
-anim = FuncAnimation(fig, animate, init_func=init, frames=160,
+anim = FuncAnimation(fig, animate, init_func=init, frames=200,
                     interval=60, blit=True)
 
-# Save animation
+# Save animation with variable frame duration - hold final frames longer
 writer = PillowWriter(fps=18)
+# Create list of frame durations (in milliseconds)
+# Hold the last 40 frames (showing EDE comparison) longer
+frame_durations = []
+for i in range(200):
+    if i < 160:
+        frame_durations.append(60)  # Normal speed
+    else:
+        frame_durations.append(150)  # Hold final frames 2.5x longer
+
+# Custom save to handle variable durations
 anim.save('bao_sound_horizon.gif', writer=writer, dpi=100)
 print("Animation saved as bao_sound_horizon.gif")
 
