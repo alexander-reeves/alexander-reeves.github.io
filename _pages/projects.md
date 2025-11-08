@@ -1,8 +1,10 @@
 ---
 layout: page
 permalink: /projects/
-title: Projects
+title: projects
 description: Overview of my main research themes and ongoing projects.
+nav: true
+nav_order: 3
 ---
 
 <div class="row row-cols-1 row-cols-md-2">

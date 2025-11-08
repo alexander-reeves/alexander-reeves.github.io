@@ -25,7 +25,7 @@ Another excellent Feynman book that distills some of his most accessible lecture
 **[17 Equations That Changed the World](https://www.amazon.com/Pursuit-Equations-That-Changed-World/dp/0465085989)** by Ian Stewart
 An exploration of the mathematical equations that have shaped our understanding of the universe and transformed society.
 
-**[Professor Povey's Perplexing Problems](https://mrvahora.wordpress.com/wp-content/uploads/2015/07/poveys-perplexing-problems.pdf)** by Thomas Povey  
+**[Professor Povey's Perplexing Problems](https://www.amazon.com/Professor-Poveys-Perplexing-Problems-Pre-university/dp/1780747756)** by Thomas Povey  
 Again I just found this really fun - interesting physics/mechanics problems that will help your problem solving skills. 
 
 **[The Tao of Physics](https://www.amazon.com/Tao-Physics-Exploration-Parallels-Mysticism/dp/1570625190/)** by Fritjof Capra

@@ -1,10 +1,29 @@
 ---
 title: Beyond ΛCDM constraints
 layout: page
-img: /assets/img/publication_preview/brownian-motion.gif
-description: Model-independent reconstructions and flexible tests of dark energy, gravity, and neutrino mass.
+img: /assets/img/bao_2d_anim_1.gif
+description: probing new physics. 
 ---
 
-I develop model-independent and model-flexible approaches to test dark energy and gravity, constrain the summed neutrino mass, and probe early-Universe physics. This includes Gaussian Process reconstructions of expansion and growth histories, and mapping reconstructed power spectra to primordial initial conditions to test inflationary predictions.
+Using my multiprobe framework, I have explored [dynamical dark energy models](https://arxiv.org/abs/2502.01722) and compared [early versus late-time dark energy](https://arxiv.org/abs/2510.06114) as potential resolutions to cosmological tensions. Earlier work examined [Early Dark Energy models with free neutrino mass](https://arxiv.org/abs/2207.01501) in light of the Hubble tension. I also contributed to a [white paper on cosmological tensions](https://arxiv.org/abs/2504.01669).
+
+*BAO animation credit: Elisa Ferreira, Bryce Cyr, and Erik Madsen. Source: [Galaxies & Cosmology 2015](http://galaxies-cosmology-2015.wikidot.com/main:about)*
+
+---
+
+### Resolving cosmological tensions
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/tension_grid.pdf" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    <strong>Testing extended cosmological models:</strong> Comparison of constraints from BAO+LSS data (orange) versus CMB data (blue) in ΛCDM and extended models including dynamical dark energy. The multiprobe analysis demonstrates how tensions between early and late-time measurements can be reconciled in extended models. From Reeves et al. (2025b).
+</div>
+
+---
+
+Future work will incorporate Gaussian Process reconstructions of expansion and growth histories, enabling direct, non-parametric tests of modified gravity by comparing independently reconstructed H(z) and D(z) evolution.
 
 
