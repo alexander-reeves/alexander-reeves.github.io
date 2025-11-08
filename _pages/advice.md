@@ -1,40 +1,40 @@
 ---
 layout: page
 permalink: /advice/
-title: Advice
-description: Resources and advice for young people interested in Physics in the UK
+title: advice
+description: Resources and advice for young people interested in physics in the UK
 nav: true
 nav_order: 7
 ---
 
-## Physics Resources for Secondary School Students
+## physics resources for secondary school students
 
-This page contains some personal recommendations for students interested in Physics, particularly those considering Oxbridge applications. These are resources I personally found useful when I was 16/17/18 and thinking about applying to study Physics at University. They therefore represent a really random assortment of books and websites so definitely not official advice but I hope it is somewhat helpful!
+This page contains some personal recommendations for students interested in physics, particularly those considering Oxbridge applications. These are resources I personally found useful when I was 16/17/18 and thinking about applying to study physics at University. They therefore represent a really random assortment of books and websites so definitely not official advice but I hope it is somewhat helpful!
 
 ### Books
 
-**The Feynman Lectures on Physics**
-This books have a special place in my heart. Feynman has a unique gift for giving intuitive pictures. Your school/library probably has a few old copies - really fun to work through each section by section and gives you a great overview of Physics.
+**[The Feynman Lectures on Physics](https://www.amazon.com/Feynman-Lectures-Physics-Boxed-Hardcover/dp/0465023827/)**
+These books have a special place in my heart. Feynman has a unique gift for giving intuitive pictures. Your school/library probably has a few old copies - really fun to work through each section by section and gives you a great overview of physics.
 
-**Surely You're Joking, Mr. Feynman!**
+**[Surely You're Joking, Mr. Feynman!](https://www.amazon.com/Surely-Youre-Joking-Mr-Feynman/dp/0393316041/)**
 Just really really fun.
 
-**Six Easy Pieces**
+**[Six Easy Pieces](https://www.amazon.com/Six-Easy-Pieces-Essentials-Explained/dp/0465025277/)**
 Another excellent Feynman book that distills some of his most accessible lectures into a compact, engaging read.
 
 **[17 Equations That Changed the World](https://www.amazon.com/Pursuit-Equations-That-Changed-World/dp/0465085989)** by Ian Stewart
 An exploration of the mathematical equations that have shaped our understanding of the universe and transformed society.
 
-**Professor Povey's Perplexing Problems** by Thomas Povey  
-Again I just found this really fun - interesting Physics/mechanics problems that will help your problem solving skills. 
+**[Professor Povey's Perplexing Problems](https://mrvahora.wordpress.com/wp-content/uploads/2015/07/poveys-perplexing-problems.pdf)** by Thomas Povey  
+Again I just found this really fun - interesting physics/mechanics problems that will help your problem solving skills. 
 
-**The Tao of Physics** by Fritjof Capra
+**[The Tao of Physics](https://www.amazon.com/Tao-Physics-Exploration-Parallels-Mysticism/dp/1570625190/)** by Fritjof Capra
 I liked this a lot when I was in school – it explores connections between modern physics and Eastern philosophy.
 
 ### Online Resources
 
 **[ISAAC Physics](https://isaacphysics.org/)**  
-Huge recommendation. A super fun website with problems and resources for physics (and now chemistry, maths and biology) students. They also run (or at least back in the days did) competitions for summer school places - I had no idea about this when I got really into solving the problems and one day I received an email inviting me for a week-long Physics camp at Cambridge which was completely formative for me. Highly recommended for anyone preparing for university-level physics.
+Huge recommendation. A super fun website with problems and resources for physics (and now chemistry, maths and biology) students. They also run (or at least back in the days did) competitions for summer school places - I had no idea about this when I got really into solving the problems and one day I received an email inviting me for a week-long physics camp at Cambridge which was completely formative for me. Highly recommended for anyone preparing for university-level physics.
 
 ### Oxbridge Interview Advice
 
@@ -44,5 +44,5 @@ Both Cambridge and Oxford run taster days for prospective students - these are r
 
 ### Share Your Resources!
 
-If you have any resources that you've found helpful in your Physics journey, please reach out and let me know! I'd love to add more recommendations to help future students.
+If you have any resources that you've found helpful in your physics journey, please reach out and let me know! I'd love to add more recommendations to help future students.
 
