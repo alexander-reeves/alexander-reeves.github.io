@@ -381,11 +381,11 @@ def animate(frame):
     
     return list(lines.values()) + list(ratio_lines.values()) + text_objects
 
-# Create animation - SLOWER with more frames
+# Create animation - SLOWER with more frames and hold final frame
 print("Generating animation...")
-anim = FuncAnimation(fig, animate, frames=200, interval=70, blit=True)
+anim = FuncAnimation(fig, animate, frames=240, interval=70, blit=True)
 
-# Save animation
+# Save animation - hold final frames longer
 writer = PillowWriter(fps=16)  # Slower frame rate for better readability
 anim.save('eftoflss_oneloop.gif', writer=writer, dpi=100)
 print("Animation saved as eftoflss_oneloop.gif")
