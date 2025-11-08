@@ -1,7 +1,7 @@
 ---
 title: Multiprobe frameworks
 layout: page
-img: /assets/img/3.jpg
+img: /assets/img/multiprobe_degeneracy_breaking.gif
 description: End-to-end, differentiable pipelines combining CMB and LSS probes for robust cosmology.
 ---
 
