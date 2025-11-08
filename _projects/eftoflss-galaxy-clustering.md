@@ -3,6 +3,7 @@ title: EFTofLSS galaxy clustering
 layout: page
 img: /assets/img/eftoflss_oneloop.gif
 description: Full-shape clustering with EFTofLSS using modern differentiable tooling (PyBird-JAX).
+importance: 2
 ---
 
 I work on full-shape galaxy clustering using the Effective Field Theory of Large-Scale Structure (EFTofLSS). Together with my collaborators Pierre Zhang and Henry Zheng, we built [`PyBird-JAX`](https://arxiv.org/abs/2507.20990): a JAX-based version of PyBird that enables rapid computation of the 1-loop galaxy power spectrum under EFTofLSS modelling. The code leverages just-in-time compilation, automatic differentiation, and neural network emulation of slow internal loops to achieve significant speedups over traditional implementations.

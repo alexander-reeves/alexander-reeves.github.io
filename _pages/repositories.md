@@ -17,21 +17,26 @@ nav_order: 4
   
   {% if site.data.repositories.gitlab_repos %}
     {% for repo in site.data.repositories.gitlab_repos %}
-      <div class="repo p-2">
-        <a href="{{ repo.url }}">
+      <div class="repo">
+        <a href="{{ repo.url }}" target="_blank">
           <div class="card hoverable">
             <div class="card-body">
-              <h5 class="card-title">
+              <h3 class="card-title text-lowercase">
                 <i class="fa-brands fa-gitlab"></i> {{ repo.name }}
-              </h5>
-              <p class="card-text">
-                {{ repo.description }}
-              </p>
-              <p class="card-text">
-                <small class="text-muted">
-                  <i class="fa-solid fa-code-branch"></i> {{ repo.organization }}
-                </small>
-              </p>
+              </h3>
+              <p class="card-text">{{ repo.description }}</p>
+              <div class="row ml-1 mr-1 p-0">
+                <div class="col-sm-12 p-0">
+                  <div class="repo-meta-data">
+                    <p class="meta-row">
+                      <span class="meta-info mr-2">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span class="text-muted">{{ repo.organization }}</span>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </a>

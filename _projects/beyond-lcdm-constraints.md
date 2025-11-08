@@ -3,6 +3,7 @@ title: Beyond ΛCDM constraints
 layout: page
 img: /assets/img/bao_sound_horizon.gif
 description: probing new physics. 
+importance: 3
 ---
 
 Using my multiprobe framework, I have explored [dynamical dark energy models](https://arxiv.org/abs/2502.01722) and compared [early versus late-time dark energy](https://arxiv.org/abs/2510.06114) as potential resolutions to cosmological tensions. Earlier work examined [Early Dark Energy models with free neutrino mass](https://arxiv.org/abs/2207.01501) in light of the Hubble tension. I also contributed to a [white paper on cosmological tensions](https://arxiv.org/abs/2504.01669).

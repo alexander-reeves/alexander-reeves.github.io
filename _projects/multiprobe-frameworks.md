@@ -3,6 +3,7 @@ title: Multiprobe frameworks
 layout: page
 img: /assets/img/multiprobe_degeneracy_breaking.gif
 description: End-to-end, differentiable pipelines combining CMB and LSS probes for robust cosmology.
+importance: 1
 ---
 
 During my PhD, I built an end-to-end, differentiable pipeline that combines multiple cosmological probes—weak lensing, galaxy clustering, BAO, CMB primary anisotropies, integrated Sachs-Wolfe effect, and CMB lensing—in a single, self-consistent inference framework. This includes simulation-based covariances, fast emulators, and cross-correlation measurements to maximise information while controlling systematics across datasets.

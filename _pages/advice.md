@@ -7,9 +7,17 @@ nav: true
 nav_order: 7
 ---
 
-## physics resources for secondary school students
+## Physics resources for secondary school students
 
 This page contains some personal recommendations for students interested in physics, particularly those considering Oxbridge applications. These are resources I personally found useful when I was 16/17/18 and thinking about applying to study physics at University. They therefore represent a really random assortment of books and websites so definitely not official advice but I hope it is somewhat helpful!
+
+### Online Resources
+
+**[ISAAC Physics](https://isaacphysics.org/)**  
+Huge recommendation. A super fun website with problems and resources for physics (and now chemistry, maths and biology) students. They also run (or at least back in the days did) competitions for summer school places - I had no idea about this when I got really into solving the problems and one day I received an email inviting me for a week-long physics camp at Cambridge which was completely formative for me. Highly recommended for anyone preparing for university-level physics.
+
+**[BPho](https://www.bpho.org.uk/)**
+The British Physics Olympiad is another great way to boost your physics and problme solving skills. In the past I competed in the Physics and Astro olympiads and found the problems to be really fun. In case your school does not offer this yet then encourage your teachers to sign up as early as possible its completely free and very little admin on their side to set this up for you.
 
 ### Books
 
@@ -31,10 +39,6 @@ Again I just found this really fun - interesting physics/mechanics problems that
 **[The Tao of Physics](https://www.amazon.com/Tao-Physics-Exploration-Parallels-Mysticism/dp/1570625190/)** by Fritjof Capra
 I liked this a lot when I was in school – it explores connections between modern physics and Eastern philosophy.
 
-### Online Resources
-
-**[ISAAC Physics](https://isaacphysics.org/)**  
-Huge recommendation. A super fun website with problems and resources for physics (and now chemistry, maths and biology) students. They also run (or at least back in the days did) competitions for summer school places - I had no idea about this when I got really into solving the problems and one day I received an email inviting me for a week-long physics camp at Cambridge which was completely formative for me. Highly recommended for anyone preparing for university-level physics.
 
 ### Oxbridge Interview Advice
 

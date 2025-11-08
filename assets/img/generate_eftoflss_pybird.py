@@ -160,9 +160,9 @@ print(f"Max 1-loop correction: {((Ploop/P_lin).max())*100:.1f}% at k={k[np.argma
 k_015_idx = np.argmin(np.abs(k-0.15))
 print(f"Ploop/P_lin at k=0.15 h/Mpc: {(Ploop/P_lin)[k_015_idx]*100:.1f}%")
 
-# Create figure with two subplots
-fig = plt.figure(figsize=(10, 12))
-gs = fig.add_gridspec(3, 1, height_ratios=[2.5, 1.5, 0.3], hspace=0.35)
+# Create figure with two subplots - compact layout
+fig = plt.figure(figsize=(10, 8.5))
+gs = fig.add_gridspec(2, 1, height_ratios=[2.2, 1.2], hspace=0.25)
 ax_main = fig.add_subplot(gs[0])
 ax_ratio = fig.add_subplot(gs[1])
 
@@ -211,25 +211,25 @@ def animate(frame):
         text.remove()
     text_objects.clear()
     
-    if frame < 35:
-        # Phase 1: Show linear power spectrum (P_11)
-        alpha = min(frame / 20, 1.0)
+    if frame < 50:
+        # Phase 1: Show linear power spectrum (P_11) - SLOWER
+        alpha = min(frame / 30, 1.0)
         line, = ax_main.plot(k, P_lin, color='#2C3E50', linewidth=4, 
                             label=r'$P_{11}(k)$ [linear]', alpha=alpha)
         lines['linear'] = line
         
-        # Add label
-        text = ax_main.text(0.05, 0.95, r'Tree-level: $P_{11}(k)$',
-                          transform=ax_main.transAxes, fontsize=13,
+        # Add label with larger font
+        text = ax_main.text(0.05, 0.95, r'Tree-level: $P_{11}(k)$ (linear matter power)',
+                          transform=ax_main.transAxes, fontsize=14,
                           verticalalignment='top',
-                          bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8),
+                          bbox=dict(boxstyle='round,pad=0.7', facecolor='wheat', alpha=0.85),
                           color='#2C3E50', weight='bold', alpha=alpha)
         text_objects.append(text)
         
         # Ratio plot
         ax_ratio.axhline(y=0, color='#2C3E50', linestyle='--', linewidth=2, alpha=alpha)
         
-    elif frame < 70:
+    elif frame < 95:
         # Phase 2: Add P_22 (bubble/box diagrams)
         line_lin, = ax_main.plot(k, P_lin, color='#2C3E50', linewidth=3.5, 
                                 label=r'$P_{11}$', alpha=0.6)
