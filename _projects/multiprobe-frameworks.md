@@ -8,7 +8,7 @@ importance: 1
 
 During my PhD, I built an end-to-end, differentiable pipeline that combines multiple cosmological probes—weak lensing, galaxy clustering, BAO, CMB primary anisotropies, integrated Sachs-Wolfe effect, and CMB lensing—in a single, self-consistent inference framework. This includes simulation-based covariances, fast emulators, and cross-correlation measurements to maximise information while controlling systematics across datasets.
 
-The pipeline was first developed and validated on mock data in [Reeves et al. (2024)](https://arxiv.org/abs/2309.03258), then applied to real data in [Reeves et al. (2025a)](https://arxiv.org/abs/2502.01722), where we explored neutrino mass constraints and dynamical dark energy. Most recently, the framework has been extended to DESI Legacy Imaging Survey data in [Reeves et al. (2025b)](https://arxiv.org/abs/2510.06114), where we compared early and late-time dark energy models as potential resolutions to contemporary cosmological tensions.
+The pipeline was first developed and validated on mock data in [Reeves et al. (2024)](https://arxiv.org/abs/2309.03258), then applied to real data in [Reeves et al. (2025a)](https://arxiv.org/abs/2502.01722), where we explored neutrino mass constraints and dynamical dark energy. Most recently, the framework has been extended to DESI Legacy Imaging Survey data in [Reeves et al. (2025b)](https://arxiv.org/abs/2510.06114), where we compared early and late-time dark energy models. 
 
 ---
 
@@ -23,7 +23,7 @@ The pipeline was first developed and validated on mock data in [Reeves et al. (2
     <strong>Multiprobe pipeline architecture:</strong> Schematic showing the end-to-end framework combining simulations, theory predictions, and observational data across multiple cosmological probes. The pipeline uses simulation-based covariances and fast emulators to enable joint inference across CMB and LSS datasets.
 </div>
 
-### Example results
+### Subset of pipeline spectra
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">

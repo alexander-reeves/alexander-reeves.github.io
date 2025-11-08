@@ -2,7 +2,7 @@
 title: Beyond ΛCDM constraints
 layout: page
 img: /assets/img/bao_sound_horizon.gif
-description: probing new physics. 
+description: Probing new physics with cosmology.
 importance: 3
 ---
 
@@ -10,7 +10,7 @@ Using my multiprobe framework, I have explored [dynamical dark energy models](ht
 
 ---
 
-### Resolving cosmological tensions
+### Recent highlights
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -18,7 +18,7 @@ Using my multiprobe framework, I have explored [dynamical dark energy models](ht
     </div>
 </div>
 <div class="caption">
-    <strong>Testing extended cosmological models:</strong> Comparison of constraints from BAO+LSS data (orange) versus CMB data (blue) in ΛCDM and extended models including dynamical dark energy. The multiprobe analysis demonstrates how tensions between early and late-time measurements can be reconciled in extended models. From Reeves et al. (2025b).
+    <strong>Testing extended cosmological models:</strong> Comparison of constraints from BAO+LSS data (blue/green) versus CMB data (black) in ΛCDM, early dark energy (EDE) and dynamical dark energy (DDE). The consistent addition of multiprobe LSS data heightens the tension in ΛCDM and leads to a mild preference for these extended models which can help to reconcile this. From Reeves et al. (2025b).
 </div>
 
 ---

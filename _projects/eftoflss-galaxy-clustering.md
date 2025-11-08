@@ -2,7 +2,7 @@
 title: EFTofLSS galaxy clustering
 layout: page
 img: /assets/img/eftoflss_oneloop.gif
-description: Full-shape clustering with EFTofLSS using modern differentiable tooling (PyBird-JAX).
+description: Full-shape galaxy clustering analysis using EFTofLSS with modern differentiable tooling (PyBird-JAX).
 importance: 2
 ---
 
