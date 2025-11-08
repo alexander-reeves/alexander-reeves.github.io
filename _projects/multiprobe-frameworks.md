@@ -15,7 +15,7 @@ The pipeline was first developed and validated on mock data in [Reeves et al. (2
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pipeline_diagram.pdf" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pipeline_diagram.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -26,7 +26,7 @@ The pipeline was first developed and validated on mock data in [Reeves et al. (2
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/data_vs_theory.pdf" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/data_vs_theory.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
