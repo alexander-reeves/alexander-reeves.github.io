@@ -229,38 +229,45 @@ def animate(frame):
         # Ratio plot
         ax_ratio.axhline(y=0, color='#2C3E50', linestyle='--', linewidth=2, alpha=alpha)
         
-    elif frame < 95:
-        # Phase 2: Add P_22 (bubble/box diagrams)
+    elif frame < 110:
+        # Phase 2: Add P_22 (bubble/box diagrams) - SLOWER
         line_lin, = ax_main.plot(k, P_lin, color='#2C3E50', linewidth=3.5, 
                                 label=r'$P_{11}$', alpha=0.6)
         lines['linear'] = line_lin
         
-        alpha = min((frame - 35) / 20, 1.0)
-        line_22, = ax_main.plot(k, P_22, color='#E74C3C', linewidth=3.5, 
+        alpha = min((frame - 50) / 35, 1.0)
+        line_22, = ax_main.plot(k, P_22, color='#E74C3C', linewidth=4, 
                                linestyle='--', label=r'$P_{22}(k)$', alpha=alpha)
         lines['p22'] = line_22
         
         # Combined so far
         P_so_far = P_lin + P_22
-        line_combined, = ax_main.plot(k, P_so_far, color='#9B59B6', linewidth=4,
+        line_combined, = ax_main.plot(k, P_so_far, color='#9B59B6', linewidth=4.5,
                                       label=r'$P_{11} + P_{22}$', alpha=alpha*0.8)
         lines['combined_22'] = line_combined
         
-        # Labels
-        text1 = ax_main.text(0.05, 0.95, r'Adding $P_{22}$ (bubble/box diagrams)',
-                           transform=ax_main.transAxes, fontsize=13,
+        # Labels - larger and clearer
+        text1 = ax_main.text(0.05, 0.95, r'Adding $P_{22}(k)$ corrections',
+                           transform=ax_main.transAxes, fontsize=14,
                            verticalalignment='top',
-                           bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8),
+                           bbox=dict(boxstyle='round,pad=0.7', facecolor='wheat', alpha=0.85),
                            color='#E74C3C', weight='bold', alpha=alpha)
         text_objects.append(text1)
         
+        text2 = ax_main.text(0.05, 0.87, r'(bubble & box diagrams)',
+                           transform=ax_main.transAxes, fontsize=12,
+                           verticalalignment='top',
+                           bbox=dict(boxstyle='round,pad=0.5', facecolor='lightyellow', alpha=0.75),
+                           alpha=alpha*0.9)
+        text_objects.append(text2)
+        
         # Ratio plot
         ratio_22 = P_22 / P_lin
-        line_r22, = ax_ratio.plot(k, ratio_22, color='#E74C3C', linewidth=2.5,
+        line_r22, = ax_ratio.plot(k, ratio_22, color='#E74C3C', linewidth=3,
                                  linestyle='--', label=r'$P_{22}/P_{11}$', alpha=alpha)
         ratio_lines['p22'] = line_r22
         
-    elif frame < 105:
+    elif frame < 150:
         # Phase 3: Add P_13 (triangle diagrams)
         line_lin, = ax_main.plot(k, P_lin, color='#2C3E50', linewidth=3, 
                                 alpha=0.4)
@@ -270,30 +277,37 @@ def animate(frame):
                                linestyle='--', alpha=0.4)
         lines['p22'] = line_22
         
-        alpha = min((frame - 70) / 20, 1.0)
-        line_13, = ax_main.plot(k, P_13, color='#3498DB', linewidth=3.5,
+        alpha = min((frame - 110) / 25, 1.0)
+        line_13, = ax_main.plot(k, P_13, color='#3498DB', linewidth=4,
                                linestyle='--', label=r'$P_{13}(k)$', alpha=alpha)
         lines['p13'] = line_13
         
         # Combined 1-loop (from PyBird)
-        line_1loop, = ax_main.plot(k, P_1loop, color='#27AE60', linewidth=4.5,
+        line_1loop, = ax_main.plot(k, P_1loop, color='#27AE60', linewidth=5,
                                   label=r'$P_{\mathrm{1-loop}}$', alpha=alpha*0.9)
         lines['1loop'] = line_1loop
         
-        # Labels
-        text1 = ax_main.text(0.05, 0.95, r'Adding $P_{13}$ (triangle diagrams)',
-                           transform=ax_main.transAxes, fontsize=13,
+        # Labels - larger and clearer
+        text1 = ax_main.text(0.05, 0.95, r'Adding $P_{13}(k)$ corrections',
+                           transform=ax_main.transAxes, fontsize=14,
                            verticalalignment='top',
-                           bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8),
+                           bbox=dict(boxstyle='round,pad=0.7', facecolor='wheat', alpha=0.85),
                            color='#3498DB', weight='bold', alpha=alpha)
         text_objects.append(text1)
         
-        text2 = ax_main.text(0.05, 0.87, r'$P_{\mathrm{1-loop}} = P_{11} + P_{22} + 2P_{13}$',
-                           transform=ax_main.transAxes, fontsize=11,
+        text2 = ax_main.text(0.05, 0.87, r'(triangle diagrams)',
+                           transform=ax_main.transAxes, fontsize=12,
                            verticalalignment='top',
-                           bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.7),
-                           color='#27AE60', weight='bold', alpha=alpha*0.8)
+                           bbox=dict(boxstyle='round,pad=0.5', facecolor='lightcyan', alpha=0.75),
+                           alpha=alpha*0.9)
         text_objects.append(text2)
+        
+        text3 = ax_main.text(0.05, 0.79, r'$P_{\mathrm{1-loop}} = P_{11} + P_{22} + 2P_{13}$',
+                           transform=ax_main.transAxes, fontsize=12,
+                           verticalalignment='top',
+                           bbox=dict(boxstyle='round,pad=0.5', facecolor='lightgreen', alpha=0.75),
+                           color='#27AE60', weight='bold', alpha=alpha*0.8)
+        text_objects.append(text3)
         
         # Ratio plot
         ratio_22 = P_22 / P_lin
@@ -304,11 +318,11 @@ def animate(frame):
                                  linestyle='--', alpha=0.4)
         ratio_lines['p22'] = line_r22
         
-        line_r13, = ax_ratio.plot(k, ratio_13, color='#3498DB', linewidth=2,
+        line_r13, = ax_ratio.plot(k, ratio_13, color='#3498DB', linewidth=2.5,
                                  linestyle='--', alpha=alpha)
         ratio_lines['p13'] = line_r13
         
-        line_rtotal, = ax_ratio.plot(k, ratio_total, color='#27AE60', linewidth=3,
+        line_rtotal, = ax_ratio.plot(k, ratio_total, color='#27AE60', linewidth=3.5,
                                     label=r'$P_{\mathrm{loop}}/P_{11}$', alpha=alpha*0.8)
         ratio_lines['total'] = line_rtotal
         
@@ -367,12 +381,12 @@ def animate(frame):
     
     return list(lines.values()) + list(ratio_lines.values()) + text_objects
 
-# Create animation
+# Create animation - SLOWER with more frames
 print("Generating animation...")
-anim = FuncAnimation(fig, animate, frames=140, interval=50, blit=True)
+anim = FuncAnimation(fig, animate, frames=200, interval=70, blit=True)
 
 # Save animation
-writer = PillowWriter(fps=20)
+writer = PillowWriter(fps=16)  # Slower frame rate for better readability
 anim.save('eftoflss_oneloop.gif', writer=writer, dpi=100)
 print("Animation saved as eftoflss_oneloop.gif")
 
