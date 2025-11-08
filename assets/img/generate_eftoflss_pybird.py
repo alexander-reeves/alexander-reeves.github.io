@@ -160,8 +160,8 @@ print(f"Max 1-loop correction: {((Ploop/P_lin).max())*100:.1f}% at k={k[np.argma
 k_015_idx = np.argmin(np.abs(k-0.15))
 print(f"Ploop/P_lin at k=0.15 h/Mpc: {(Ploop/P_lin)[k_015_idx]*100:.1f}%")
 
-# Create figure with two subplots - compact layout
-fig = plt.figure(figsize=(10, 8.5))
+# Create figure with two subplots - square layout to match multiprobe animation
+fig = plt.figure(figsize=(8, 8))
 gs = fig.add_gridspec(2, 1, height_ratios=[2.2, 1.2], hspace=0.25)
 ax_main = fig.add_subplot(gs[0])
 ax_ratio = fig.add_subplot(gs[1])
