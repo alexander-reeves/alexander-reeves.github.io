@@ -17,7 +17,7 @@ This page contains some personal recommendations for students interested in phys
 Huge recommendation. A super fun website with problems and resources for physics (and now chemistry, maths and biology) students. They run the [Senior Physics Challenge (SPC)](https://isaacscience.org/pages/spc) - an online competition for Year 12 students that can lead to invitations for their residential physics summer school. When I participated (under the old format), I had no idea about this competition but ended up receiving an email inviting me for a week-long physics camp at Cambridge. This was completely formative for me and I made many good friends which I still have to this day.
 
 **[BPho](https://www.bpho.org.uk/)**
-The British Physics Olympiad is another great way to boost your physics and problme solving skills. In the past I competed in the Physics and Astro olympiads and found the problems to be really fun. In case your school does not offer this yet then encourage your teachers to sign up as early as possible its completely free and very little admin on their side to set this up for you.
+The British Physics Olympiad is another great way to boost your physics and problem solving skills. In the past I competed in the Physics and Astro olympiads and found the problems to be really fun. In case your school does not offer this yet then encourage your teachers to sign up as early as possible its completely free and very little admin on their side to set this up for you.
 
 ### Books
 
