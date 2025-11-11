@@ -5,10 +5,5 @@ repo_description_lines_max: 2
 
 github_repos:
   - alexander-reeves/jax-loglike
+  - alexander-reeves/ufalcon-published
   - pierrexyz/pybird
-
-gitlab_repos:
-  - name: UFalcon
-    url: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published
-    description: GPU-accelerated N-body simulation post-processing tool for computing cosmological observables (power spectra, correlation functions, halo catalogs). Built for the multiprobe pipeline.
-    organization: ETH Zürich Cosmology Group
