@@ -5,5 +5,10 @@ repo_description_lines_max: 2
 
 github_repos:
   - alexander-reeves/jax-loglike
-  - alexander-reeves/ufalcon-published
   - pierrexyz/pybird
+
+gitlab_repos:
+  - url: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published
+    name: ufalcon-published
+    description: UFalcon published
+    organization: cosmo_public

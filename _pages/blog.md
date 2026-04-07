@@ -3,7 +3,7 @@ layout: page
 permalink: /blog/
 title: blog
 description: Some random thoughts about things I like.
-nav: true
+nav: false
 nav_order: 1
 ---
 
