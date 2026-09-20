@@ -2,28 +2,36 @@
 layout: about
 title: about
 permalink: /
-subtitle: SNSF Postdoc.Mobility Fellow · Astrophysics, University of Oxford
+subtitle: Cosmologist · University of Oxford
+
+hero:
+  image: hero_mayall.jpg
+  alt: The Nicholas U. Mayall 4-metre Telescope at Kitt Peak beneath the Milky Way
+  tagline: Combining galaxy surveys and the CMB to work out what the Universe is made of.
+  credit: DESI Collaboration/DOE/KPNO/NOIRLab/NSF/AURA/P. Horálek (Institute of Physics in Opava)
 
 profile:
   align: right
   image: profile_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
+  caption: Kitt Peak, during a DESI support observer shift — February 2025.
   more_info: >
     <p>Denys Wilkinson Building</p>
     <p>Keble Road, Oxford OX1 3RH</p>
     <p>alexcharlesreeves@gmail.com</p>
 
-hero_band: "ΛCDM linear theory · computed with CAMB"
-
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 ---
 
-I am an **SNSF Postdoc.Mobility Fellow** in [Astrophysics](https://www.physics.ox.ac.uk/research/subdepartment/astrophysics) at the **University of Oxford**. Before that I completed my PhD in [Alexandre Refregier's cosmology group](https://cosmology.ethz.ch/) at ETH Zürich, and I originally come from the UK, where I did my undergraduate and masters studies at Downing College, Cambridge.
+I'm a cosmologist at Oxford, here on an SNSF Postdoc.Mobility fellowship.
 
-I work on **data-driven cosmology**: extracting as much as possible about the physics of the Universe from large-scale structure and the cosmic microwave background, while keeping firm control of the systematics that stand in the way. In practice this means three overlapping threads — building end-to-end [multiprobe frameworks]({{ '/projects/multiprobe-frameworks/' | relative_url }}) that combine weak lensing, galaxy clustering, BAO and CMB observables self-consistently; developing fast, differentiable theory tools such as [`PyBird-JAX`](https://arxiv.org/abs/2507.20990) for [EFTofLSS galaxy clustering]({{ '/projects/eftoflss-galaxy-clustering/' | relative_url }}); and using both to [test what lies beyond ΛCDM]({{ '/projects/beyond-lcdm-constraints/' | relative_url }}), from dynamical dark energy to neutrino mass.
+Most of what I do comes down to squeezing more out of data we already have. Galaxy surveys and the cosmic microwave background measure overlapping things, and analysing them together breaks degeneracies that neither can break on its own. The catch is that you have to model both consistently, all the way through, and that turns out to be most of the work. I spent my PhD building a [pipeline that does it end to end]({{ '/projects/multiprobe-frameworks/' | relative_url }}) — weak lensing, galaxy clustering, BAO, the ISW effect, CMB lensing — and a good deal of time since worrying about the places it could quietly go wrong.
 
-A recurring theme is that inference is as much a modelling problem as a measurement one — volume projection effects, covariance estimation and emulator accuracy can shift a result as much as the data themselves.
+Those places are usually not where you expect. Covariance matrices estimated from too few simulations. Emulators that are accurate on average and badly wrong in the corner of parameter space you care about. [Volume projection effects](https://arxiv.org/abs/2507.20991) that shift a posterior by a fraction of a sigma, which is small until it isn't. A result can move as much from any of these as from the data themselves, which I find both annoying and genuinely interesting.
 
-The full list of my papers is on [InspireHEP](https://inspirehep.net/authors/1960608), and my code lives on [GitHub](https://github.com/alexander-reeves). If you are a secondary school student thinking about physics at university, I keep a page of [resources and advice]({{ '/advice/' | relative_url }}) that might be useful.
+More recently I've been working on the theory side, on [`PyBird-JAX`](https://arxiv.org/abs/2507.20990) — an EFTofLSS code fast and differentiable enough that you can explore the model space properly instead of one cosmology at a time. Written with Pierre Zhang and Henry Zheng.
+
+I'm a member of [DESI](https://www.desi.lbl.gov/) and [LSST-DESC](https://lsstdesc.org/). Before Oxford I did my PhD with [Alexandre Refregier](https://cosmology.ethz.ch/) at ETH Zürich, and Part III before that at Downing College, Cambridge.
+
+If you're at school and thinking about physics at university, I keep a page of [books and things worth reading]({{ '/advice/' | relative_url }}). Happy to talk about Oxbridge interviews too — just email.

@@ -4,6 +4,9 @@ layout: page
 img: /assets/img/eftoflss_oneloop.gif
 description: Full-shape galaxy clustering analysis using EFTofLSS with modern differentiable tooling (PyBird-JAX).
 importance: 2
+banner: banner_desi_map.jpg
+banner_alt: The full DESI year-five three-dimensional map of the Universe
+banner_credit: "The DESI year-five map. Credit: DESI Collaboration and DESI Member Institutions/DOE/KPNO/NOIRLab/NSF/AURA/R. Proctor; image processing M. Zamani (NSF NOIRLab)"
 ---
 
 I work on full-shape galaxy clustering using the Effective Field Theory of Large-Scale Structure (EFTofLSS). Together with my collaborators Pierre Zhang and Henry Zheng, we built [`PyBird-JAX`](https://arxiv.org/abs/2507.20990): a JAX-based version of PyBird that enables rapid computation of the 1-loop galaxy power spectrum under EFTofLSS modelling. The code leverages just-in-time compilation, automatic differentiation, and neural network emulation of slow internal loops to achieve significant speedups over traditional implementations.

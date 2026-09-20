@@ -1,14 +1,47 @@
+# Repository cards are rendered natively from this file by
+# _includes/repository/repo.liquid — no third-party badge service, which the
+# template used to depend on (github-readme-stats, currently offline).
+#
+# Add a repo by adding an entry here. `description` is shown verbatim, so it
+# does not matter whether the GitHub repo itself has one set.
+
 github_users:
   - alexander-reeves
 
-repo_description_lines_max: 2
+repos:
+  - name: pybird
+    owner: pierrexyz
+    url: https://github.com/pierrexyz/pybird
+    description: EFTofLSS predictions for biased tracers in redshift space. The code behind the PyBird-JAX paper.
+    language: Python
 
-github_repos:
-  - alexander-reeves/jax-loglike
-  - pierrexyz/pybird
+  - name: pybird_model_independent
+    owner: alexander-reeves
+    url: https://github.com/alexander-reeves/pybird_model_independent
+    description: Model-independent emulation of one-loop galaxy power spectra, built on PyBird.
+    language: Python
 
-gitlab_repos:
-  - url: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published
-    name: ufalcon-published
-    description: UFalcon published
-    organization: cosmo_public
+  - name: planck_compressed
+    owner: alexander-reeves
+    url: https://github.com/alexander-reeves/planck_compressed
+    description: MOPED-compressed Planck TTTEEE + lensing likelihood in Python.
+    language: Python
+
+  - name: plancklens_py
+    owner: alexander-reeves
+    url: https://github.com/alexander-reeves/plancklens_py
+    description: A Python implementation of the Planck PR3 lensing likelihood, for an easier interface.
+    language: Python
+
+  - name: jax-loglike
+    owner: alexander-reeves
+    url: https://github.com/alexander-reeves/jax-loglike
+    description: Differentiable cosmological likelihoods in JAX.
+    language: Jupyter Notebook
+
+  - name: ufalcon-published
+    owner: cosmo_public
+    url: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published
+    description: UFalcon — rapid post-processing of N-body output into full-sky maps for several cosmological probes.
+    language: Python
+    host: gitlab

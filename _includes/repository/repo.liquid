@@ -1,27 +1,28 @@
-{% assign repo_url = include.repository | split: '/' %}
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
-{% else %}
-  {% assign show_owner = true %}
-{% endif %}
+{% comment %}
+  A repository card rendered from _data/repositories.yml.
 
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
-{% endif %}
+  This used to pull a PNG from github-readme-stats.vercel.app, which is a
+  third-party service and is currently returning 503 DEPLOYMENT_PAUSED — so the
+  cards rendered as broken images. Everything here is local.
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-  </a>
-</div>
+  Usage: {% include repository/repo.liquid repository=repo %}
+{% endcomment %}
+
+{% assign repo = include.repository %}
+
+<a class="repo-card" href="{{ repo.url }}" target="_blank" rel="noopener noreferrer">
+  <div class="repo-card-head">
+    {% if repo.host == 'gitlab' %}
+      <i class="fa-brands fa-gitlab" aria-hidden="true"></i>
+    {% else %}
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
+    {% endif %}
+    <span class="repo-card-owner">{{ repo.owner }}/</span><wbr><span class="repo-card-name">{{ repo.name }}</span>
+  </div>
+  {% if repo.description %}
+    <p class="repo-card-desc">{{ repo.description }}</p>
+  {% endif %}
+  {% if repo.language %}
+    <p class="repo-card-lang">{{ repo.language }}</p>
+  {% endif %}
+</a>

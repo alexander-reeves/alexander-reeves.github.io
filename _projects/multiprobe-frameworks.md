@@ -4,6 +4,9 @@ layout: page
 img: /assets/img/multiprobe_degeneracy_breaking.gif
 description: End-to-end, differentiable pipelines combining CMB and LSS probes for robust cosmology.
 importance: 1
+banner: banner_legacy_survey.jpg
+banner_alt: Messier 96 imaged by the DESI Legacy Imaging Surveys
+banner_credit: "M96 in the DESI Legacy Imaging Surveys — the imaging data behind Reeves et al. (2025b). Credit: DESI Legacy Imaging Surveys/LBNL/DOE & KPNO/CTIO/NOIRLab/NSF/AURA"
 ---
 
 During my PhD, I built an end-to-end, differentiable pipeline that combines multiple cosmological probes—weak lensing, galaxy clustering, BAO, CMB primary anisotropies, integrated Sachs-Wolfe effect, and CMB lensing—in a single, self-consistent inference framework. This includes simulation-based covariances, fast emulators, and cross-correlation measurements to maximise information while controlling systematics across datasets.

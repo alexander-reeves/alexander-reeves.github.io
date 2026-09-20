@@ -96,14 +96,15 @@ html[data-theme="dark"] {
 // 2. Typography
 // ---------------------------------------------------------------------------
 
-$serif-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
-$serif-body: "Newsreader", Georgia, "Times New Roman", serif;
+$serif-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+$serif-body: "Literata", Georgia, "Times New Roman", serif;
 $mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
 body {
+  overflow-x: clip; // contains the 100vw hero break-out
   font-family: $serif-body;
-  font-size: 1.0625rem;
-  line-height: 1.7;
+  font-size: 1.02rem;
+  line-height: 1.72;
   font-optical-sizing: auto;
   background-image: var(--atmosphere);
   background-repeat: no-repeat;
@@ -119,20 +120,17 @@ h4,
 h5,
 h6 {
   font-family: $serif-display;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.18;
 }
 
-// Instrument Serif is a display cut (400 only) — small headings need the
-// workhorse serif at a heavier weight to keep their rank in the hierarchy.
 h3,
 h4,
 h5,
 h6 {
-  font-family: $serif-body;
   font-weight: 600;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.004em;
   line-height: 1.3;
 }
 
@@ -266,7 +264,7 @@ kbd {
 
 .post-header .post-title {
   font-family: $serif-display;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.015em;
 
   .font-weight-bold {
@@ -418,9 +416,14 @@ blockquote {
   border-radius: 0 3px 3px 0;
 }
 
-// Give displayed equations room to breathe.
+// Give displayed equations room to breathe — and let the wide ones scroll in
+// their own container rather than pushing the whole page sideways on a phone.
 mjx-container[jax="CHTML"][display="true"] {
   margin: 1.5rem 0 !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.35rem;
 }
 
 // Blog index reads as a contents list, not a table.
@@ -441,28 +444,253 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 
 // ---------------------------------------------------------------------------
-// 9. Hero band (about page) — light/dark pair toggled by _themes.scss
+// 9. Full-bleed photographic hero (about page)
 // ---------------------------------------------------------------------------
 
-.hero-band {
-  margin: 0 0 2.2rem;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 0.6rem 0 0.35rem;
+.site-hero {
+  position: relative;
+  // break out of the 930px container without a wrapper
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -3rem; // cancels the .mt-5 on al-folio's .container
+  margin-bottom: 3rem;
+  height: clamp(340px, 62vh, 620px);
+  overflow: hidden;
+  background: #05070c;
+  display: flex;
+  align-items: flex-end;
+}
+
+.site-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+
+// Legibility scrim: dark at the bottom where the type sits, clear at the top
+// so the Milky Way still reads.
+.site-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3, 5, 10, 0.92) 0%, rgba(3, 5, 10, 0.55) 34%, rgba(3, 5, 10, 0.08) 68%, rgba(3, 5, 10, 0.25) 100%);
+}
+
+.site-hero-inner {
+  position: relative;
+  width: 100%;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 0 15px 2.6rem;
+  color: #f2f4f8;
+}
+
+.site-hero-name {
+  font-family: $serif-display;
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6.4vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.55rem;
+  color: #fff;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.6);
+}
+
+.site-hero-role {
+  font-family: $mono;
+  font-size: 0.78rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: #a9bbd8;
+  margin: 0 0 0.9rem;
+}
+
+.site-hero-tagline {
+  font-family: $serif-body;
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  line-height: 1.5;
+  max-width: 34em;
+  color: #dde3ee;
+  margin: 0;
+}
+
+.site-hero-credit {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.45rem;
+  margin: 0;
+  font-family: $mono;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: right;
+  max-width: 62vw;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 576px) {
+  .site-hero {
+    height: clamp(300px, 54vh, 420px);
+    margin-bottom: 2rem;
+  }
+
+  .site-hero-inner {
+    padding-bottom: 1.8rem;
+  }
+
+  .site-hero-tagline {
+    font-size: 0.98rem;
+  }
+
+  .site-hero-credit {
+    font-size: 0.5rem;
+    max-width: 80vw;
+  }
+}
+
+// Caption under the profile photograph
+.profile-caption {
+  margin: 0.6rem 0 0;
+  font-family: $mono;
+  font-size: 0.68rem;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
+
+// ---------------------------------------------------------------------------
+// 9a. Page banner (project pages)
+// ---------------------------------------------------------------------------
+
+.page-banner {
+  // full-bleed, like the about-page hero
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -3rem;
+  margin-bottom: 2.4rem;
+  position: relative;
 
   img {
-    width: 100%;
     display: block;
+    width: 100%;
+    height: clamp(180px, 26vw, 300px);
+    object-fit: cover;
+    // these are dark astronomical frames; the page ground is pale in light
+    // mode, so a hairline keeps the edge from looking accidental
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+// CC BY 4.0 requires the credit to be clear and visible, so it gets its own
+// scrim rather than relying on the underlying image being dark.
+.page-banner-credit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 1.6rem 0.85rem 0.4rem;
+  font-family: $mono;
+  font-size: 0.56rem;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: right;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 576px) {
+  .page-banner {
+    margin-bottom: 1.8rem;
   }
 
-  .hero-band-label {
-    font-family: $mono;
-    font-size: 0.66rem;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-    margin: 0.4rem 0 0;
+  .page-banner-credit {
+    font-size: 0.5rem;
+    text-align: left;
   }
+}
+
+// ---------------------------------------------------------------------------
+// 9b. Repository cards (rendered locally, see _includes/repository/repo.liquid)
+// ---------------------------------------------------------------------------
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.15rem 0.95rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--global-card-bg-color);
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--global-theme-color);
+
+    .repo-card-name {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// Block, not flex: owner and name must flow as one run of text so a long
+// repo name wraps at the slash instead of being split mid-word.
+.repo-card-head {
+  display: block;
+  font-family: $mono;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+  overflow-wrap: break-word;
+  word-break: normal;
+
+  i {
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+    margin-right: 0.4rem;
+  }
+}
+
+.repo-card-owner {
+  color: var(--global-text-color-light);
+}
+
+.repo-card-name {
+  color: var(--global-text-color);
+  font-weight: 500;
+  transition: color 200ms ease;
+}
+
+.repo-card-desc {
+  flex: 1;
+  margin: 0 0 0.8rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--global-text-color);
+}
+
+.repo-card-lang {
+  margin: 0;
+  font-family: $mono;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
 }
 
 // ---------------------------------------------------------------------------
