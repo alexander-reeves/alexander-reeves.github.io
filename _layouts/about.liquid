@@ -40,6 +40,25 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Hero band: CAMB spectra, light/dark pair toggled by _sass/_themes.scss -->
+    {% if page.hero_band %}
+      <div class="hero-band">
+        <img
+          class="repo-img-light"
+          src="{{ '/assets/img/hero_band_light.png' | relative_url }}"
+          alt="CMB temperature power spectrum, linear matter power spectrum, and the BAO wiggle ratio"
+          loading="lazy"
+        >
+        <img
+          class="repo-img-dark"
+          src="{{ '/assets/img/hero_band_dark.png' | relative_url }}"
+          alt="CMB temperature power spectrum, linear matter power spectrum, and the BAO wiggle ratio"
+          loading="lazy"
+        >
+        <p class="hero-band-label">{{ page.hero_band }}</p>
+      </div>
+    {% endif %}
+
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>

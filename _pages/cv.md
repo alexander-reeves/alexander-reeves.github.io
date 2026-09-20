@@ -3,9 +3,9 @@ layout: default
 permalink: /cv/
 title: cv
 nav: true
-nav_order: 5
+nav_order: 6
 cv_pdf: Alex_CV_academic.pdf
-description: This is my latest CV as of 14.09.2025. Please get in touch if you would like something more up-to-date.
+description: My academic CV. Please get in touch if you would like a more up-to-date version.
 ---
 
 <div class="post">

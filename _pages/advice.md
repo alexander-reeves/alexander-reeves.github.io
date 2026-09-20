@@ -4,7 +4,7 @@ permalink: /advice/
 title: advice
 description: Resources and advice for young people interested in physics in the UK
 nav: true
-nav_order: 7
+nav_order: 8
 ---
 
 ## Physics resources for secondary school students
@@ -34,11 +34,10 @@ Another excellent Feynman book that distills some of his most accessible lecture
 An exploration of the mathematical equations that have shaped our understanding of the universe and transformed society.
 
 **[Professor Povey's Perplexing Problems](https://www.amazon.com/Professor-Poveys-Perplexing-Problems-Pre-university/dp/1780747756)** by Thomas Povey  
-Again I just found this really fun - interesting physics/mechanics problems that will help your problem solving skills. 
+Again I just found this really fun - interesting physics/mechanics problems that will help your problem solving skills.
 
 **[The Tao of Physics](https://www.amazon.com/Tao-Physics-Exploration-Parallels-Mysticism/dp/1570625190/)** by Fritjof Capra
 I liked this a lot when I was in school – it explores connections between modern physics and Eastern philosophy.
-
 
 ### Oxbridge Interview Advice
 
@@ -49,4 +48,3 @@ Both Cambridge and Oxford run taster days for prospective students - these are r
 ### Share Your Resources!
 
 If you have any resources that you've found helpful in your physics journey, please reach out and let me know! I'd love to add more recommendations to help future students.
-

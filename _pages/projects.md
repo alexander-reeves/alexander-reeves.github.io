@@ -13,5 +13,3 @@ nav_order: 3
     {% include projects.liquid %}
   {% endfor %}
 </div>
-
-

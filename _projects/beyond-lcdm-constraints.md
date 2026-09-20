@@ -24,5 +24,3 @@ Using my multiprobe framework, I have explored [dynamical dark energy models](ht
 ---
 
 Future work will incorporate Gaussian Process reconstructions of expansion and growth histories, enabling direct, non-parametric tests of modified gravity by comparing independently reconstructed H(z) and D(z) evolution.
-
-

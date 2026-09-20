@@ -6,17 +6,20 @@ title: blank # Updated title to include your full name
 first_name: Alexander
 middle_name: C. T.
 last_name: Reeves
-email: areeves@phys.ethz.ch
+email: alexcharlesreeves@gmail.com
 description: >
-  Alexander Reeves is a cosmologist working between theory and experiment with a focus on combined probes and computational methods.
+  Alexander Reeves is an SNSF Postdoc.Mobility Fellow in Astrophysics at the University of Oxford,
+  working on combined-probe cosmology, the effective field theory of large-scale structure,
+  and differentiable inference pipelines.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: "alexander reeves, dark matter, dark energy, cosmology" # Keywords now include "alexander reeves"
+  Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the
+  <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme,
+  hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+keywords: "alexander reeves, cosmology, large-scale structure, dark energy, EFTofLSS, combined probes, oxford"
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🚀🚀 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🌌 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https:/alexander-reeves.github.io # the base hostname & protocol for your site
+url: https://alexander-reeves.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -62,9 +65,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://alexander-reeves.github.io/assets/img/og_card.png # must be an absolute URL
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -78,6 +81,8 @@ discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
 github_username: alexander-reeves # your GitHub user name
+inspirehep_id: 1960608 # your InspireHEP author id (inspirehep.net/authors/<id>)
+arxiv_author_query: "Reeves, Alexander" # name used for the arXiv author-search link
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 instagram_id: # your instagram id
@@ -88,7 +93,7 @@ lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 linkedin_username: # your LinkedIn user name
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 medium_username: # your Medium username
-orcid_id: # your ORCID ID
+orcid_id: # TODO: add your ORCID iD here (e.g. 0000-0002-1825-0097) to show the ORCID icon
 osf_id: # your OSF ID
 pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
@@ -132,7 +137,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: "\\(\\chi^2\\) Blog"
-blog_description: Some random thoughts about things I like.
+blog_description: Notes on physics, maths and the odd thing I found beautiful.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -203,7 +208,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
@@ -484,7 +489,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap"
   highlightjs:
     integrity:
       css:

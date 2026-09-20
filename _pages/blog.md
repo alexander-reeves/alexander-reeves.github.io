@@ -2,9 +2,9 @@
 layout: page
 permalink: /blog/
 title: blog
-description: Some random thoughts about things I like.
-nav: false
-nav_order: 1
+description: Notes on physics, maths and the odd thing I found beautiful.
+nav: true
+nav_order: 4
 ---
 
 <div class="post">
@@ -58,4 +58,3 @@ nav_order: 1
     </div>
   </article>
 </div>
-

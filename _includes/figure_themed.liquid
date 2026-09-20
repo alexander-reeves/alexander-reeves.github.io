@@ -1,0 +1,37 @@
+{% comment %}
+  A figure with a light and a dark rendering, toggled by the
+  .repo-img-light / .repo-img-dark rules already defined in _sass/_themes.scss.
+
+  Use it for generated plots, whose background has to match the page.
+
+  Usage:
+    {% include figure_themed.liquid
+       base="assets/img/catenary_family" ext="png"
+       alt="..." caption="..." zoomable=true %}
+{% endcomment %}
+
+{% assign ext = include.ext | default: 'png' %}
+
+<figure>
+  <img
+    class="repo-img-light img-fluid rounded z-depth-1"
+    src="{{ include.base | append: '_light.' | append: ext | relative_url }}"
+    alt="{{ include.alt }}"
+    loading="{{ include.loading | default: 'lazy' }}"
+    {% if include.zoomable %}
+      data-zoomable
+    {% endif %}
+  >
+  <img
+    class="repo-img-dark img-fluid rounded z-depth-1"
+    src="{{ include.base | append: '_dark.' | append: ext | relative_url }}"
+    alt="{{ include.alt }}"
+    loading="{{ include.loading | default: 'lazy' }}"
+    {% if include.zoomable %}
+      data-zoomable
+    {% endif %}
+  >
+  {% if include.caption %}
+    <figcaption class="caption">{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

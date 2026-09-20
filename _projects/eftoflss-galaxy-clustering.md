@@ -21,4 +21,4 @@ This framework has enabled new analyses, including a study of [volume projection
 </div>
 <div class="caption">
     <strong>Measuring dark energy with DESI:</strong> Forecasted constraints on the dark energy equation of state parameters (w₀, wₐ) from DESI Year 1 full-shape galaxy clustering analysis using PyBird-JAX. The analysis accounts for volume projection effects that can bias cosmological parameter inference when fitting EFTofLSS models to survey data. From Reeves et al. (2025c).
-</div> 
+</div>

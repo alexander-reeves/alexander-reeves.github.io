@@ -1,0 +1,562 @@
+/*******************************************************************************
+ * Custom theme layer — "Observatory"
+ *
+ * Imported LAST in assets/css/main.scss so it overrides al-folio's defaults
+ * without editing them (keeps upstream merges clean).
+ *
+ * Direction: an astronomical plate archive. Deep Pleiades blue as the dominant
+ * hue, a sharp warm amber lifted from the sunset in the profile photo as the
+ * single accent, hairline rules, and monospaced annotations that read like
+ * axis labels on a figure.
+ ******************************************************************************/
+
+// ---------------------------------------------------------------------------
+// 1. Palette
+// ---------------------------------------------------------------------------
+
+$plate-paper: #faf9f6; // warm plate print
+$plate-paper-sunk: #f2f1ec;
+$plate-ink: #131822; // blue-black
+$plate-ink-soft: #5c6577;
+$plate-cobalt: #2647b8; // Pleiades nebulosity
+$plate-cobalt-lift: #3b5bdb;
+
+$night-field: #0b0e14; // deep sky
+$night-surface: #121722;
+$night-text: #c9d1e0;
+$night-text-soft: #7e8899;
+$night-star: #8fb4ff; // blue-white starlight
+
+$ember: #d98c2b; // sunset over Kitt Peak
+$ember-lift: #e8a33d;
+
+$rule-light: rgba(19, 24, 34, 0.12);
+$rule-dark: rgba(201, 209, 224, 0.16);
+
+:root {
+  --global-bg-color: #{$plate-paper};
+  --global-code-bg-color: rgba(38, 71, 184, 0.06);
+  --global-text-color: #{$plate-ink};
+  --global-text-color-light: #{$plate-ink-soft};
+  --global-theme-color: #{$plate-cobalt};
+  --global-hover-color: #{$plate-cobalt-lift};
+  --global-hover-text-color: #{$plate-paper};
+  --global-footer-bg-color: #{$plate-ink};
+  --global-footer-text-color: rgba(201, 209, 224, 0.75);
+  --global-footer-link-color: #{$plate-paper};
+  --global-distill-app-color: #{$plate-ink-soft};
+  --global-divider-color: #{$rule-light};
+  --global-card-bg-color: #{$plate-paper};
+  --global-highlight-color: #{$ember};
+  --global-back-to-top-bg-color: rgba(19, 24, 34, 0.55);
+  --global-back-to-top-text-color: #{$plate-paper};
+  --global-newsletter-bg-color: #{$plate-paper};
+  --global-newsletter-text-color: #{$plate-ink};
+
+  // local tokens
+  --surface-sunk: #{$plate-paper-sunk};
+  --accent-warm: #{$ember};
+  --rule: #{$rule-light};
+  --shadow-card: 0 1px 2px rgba(19, 24, 34, 0.04), 0 8px 24px -12px rgba(19, 24, 34, 0.18);
+  --shadow-card-hover: 0 1px 2px rgba(19, 24, 34, 0.06), 0 18px 40px -16px rgba(38, 71, 184, 0.28);
+  --atmosphere: none;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #{$night-field};
+  --global-code-bg-color: rgba(143, 180, 255, 0.08);
+  --global-text-color: #{$night-text};
+  --global-text-color-light: #{$night-text-soft};
+  --global-theme-color: #{$night-star};
+  --global-hover-color: #{$night-star};
+  --global-hover-text-color: #{$night-field};
+  --global-footer-bg-color: #{$night-surface};
+  --global-footer-text-color: #{$night-text-soft};
+  --global-footer-link-color: #{$night-text};
+  --global-distill-app-color: #{$night-text-soft};
+  --global-divider-color: #{$rule-dark};
+  --global-card-bg-color: #{$night-surface};
+  --global-highlight-color: #{$ember-lift};
+  --global-back-to-top-bg-color: rgba(143, 180, 255, 0.22);
+  --global-back-to-top-text-color: #{$night-text};
+  --global-newsletter-bg-color: #{$night-surface};
+  --global-newsletter-text-color: #{$night-text};
+
+  --surface-sunk: #0f131c;
+  --accent-warm: #{$ember-lift};
+  --rule: #{$rule-dark};
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 10px 30px -18px rgba(0, 0, 0, 0.9);
+  --shadow-card-hover: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 20px 46px -18px rgba(0, 0, 0, 1);
+  // faint nebulosity, not a gradient wash
+  --atmosphere: radial-gradient(1200px 600px at 78% -8%, rgba(38, 71, 184, 0.22), transparent 62%),
+    radial-gradient(900px 500px at 8% 4%, rgba(143, 180, 255, 0.07), transparent 58%);
+}
+
+// ---------------------------------------------------------------------------
+// 2. Typography
+// ---------------------------------------------------------------------------
+
+$serif-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+$serif-body: "Newsreader", Georgia, "Times New Roman", serif;
+$mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+body {
+  font-family: $serif-body;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-optical-sizing: auto;
+  background-image: var(--atmosphere);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-display;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+// Instrument Serif is a display cut (400 only) — small headings need the
+// workhorse serif at a heavier weight to keep their rank in the hierarchy.
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-body;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.9rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+// Mono is the "instrument label" voice: dates, tags, captions, addresses.
+.post-meta,
+.post-tags,
+.profile .more-info,
+.caption,
+figcaption.caption,
+.news th,
+.repo-meta-data,
+.post-description,
+.navbar-nav .nav-item .nav-link,
+.tag-category-list,
+.header-bar .desc {
+  font-family: $mono;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+code,
+pre,
+kbd {
+  font-family: $mono;
+}
+
+// ---------------------------------------------------------------------------
+// 3. Links — a rule that draws in, rather than a browser underline
+// ---------------------------------------------------------------------------
+
+// Applied to running text only. Deliberately avoids :not() with a descendant
+// combinator, which older Safari drops — taking the whole rule with it.
+.post article a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 220ms ease;
+
+  &:hover {
+    text-decoration: none;
+    background-size: 100% 1px;
+  }
+}
+
+// Opt out: anything that is an icon, a card or a list title rather than prose.
+.post article .social a,
+.post article .contact-icons a,
+.post article .news-title,
+.post article .card a,
+.post article figure a,
+.post article a.no-rule {
+  background-image: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post article a {
+    transition: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 4. Header / navigation
+// ---------------------------------------------------------------------------
+
+.navbar {
+  border-bottom: 1px solid var(--rule);
+  opacity: 1;
+  backdrop-filter: saturate(140%) blur(10px);
+  background-color: var(--global-bg-color); // fallback: older Safari/Chrome
+  background-color: color-mix(in srgb, var(--global-bg-color) 88%, transparent);
+}
+
+.navbar.navbar-light {
+  .navbar-brand {
+    font-family: $serif-display;
+    font-size: 1.28rem;
+    letter-spacing: 0.005em;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    text-transform: lowercase;
+    letter-spacing: 0.06em;
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-text-color);
+    }
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    color: var(--global-text-color);
+    background-color: transparent;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0.15rem;
+      height: 1px;
+      background: var(--accent-warm);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 5. About page — name, photo, address block
+// ---------------------------------------------------------------------------
+
+.post-header .post-title {
+  font-family: $serif-display;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+
+  .font-weight-bold {
+    font-weight: 400 !important;
+  }
+}
+
+.post-header .desc {
+  font-family: $mono;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--global-text-color-light);
+  text-transform: none;
+}
+
+.profile {
+  img {
+    border-radius: 3px;
+    box-shadow: var(--shadow-card);
+  }
+
+  .more-info {
+    margin-top: 0.85rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--rule);
+    font-family: $mono;
+    font-size: 0.72rem;
+    line-height: 1.75;
+    color: var(--global-text-color-light);
+
+    p {
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 6. Cards (projects, repositories, cv)
+// ---------------------------------------------------------------------------
+
+.card {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+
+  .card-title {
+    font-family: $serif-body;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+}
+
+.card.hoverable:hover,
+.projects a:hover .card {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--global-theme-color); // fallback: older Safari/Chrome
+  border-color: color-mix(in srgb, var(--global-theme-color) 45%, transparent);
+}
+
+.projects {
+  h2.category {
+    font-family: $mono;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 7. Figures — the reason this site exists
+// ---------------------------------------------------------------------------
+
+figure {
+  margin-bottom: 1.5rem;
+}
+
+.caption,
+figcaption.caption {
+  margin-top: 0.7rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--accent-warm);
+  text-align: left;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+}
+
+img.img-fluid.rounded.z-depth-1,
+.projects .card img {
+  border-radius: 3px;
+}
+
+// Most figures on this site are matplotlib exports on a white ground. In dark
+// mode they would read as holes punched in the page, so mount them on a
+// deliberate plate instead — the way a printed figure sits on paper.
+//
+// Figures generated as a light/dark pair (see _includes/figure_themed.liquid)
+// already match the page and opt out, as does the profile photograph.
+html[data-theme="dark"] {
+  .post article figure img.img-fluid:not(.repo-img-light):not(.repo-img-dark) {
+    background: #f4f3ef;
+    padding: 0.7rem;
+    border-radius: 4px;
+  }
+
+  .post article .profile figure img {
+    background: none;
+    padding: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 8. Long-form post typography
+// ---------------------------------------------------------------------------
+
+.post {
+  h2 {
+    margin-top: 2.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    margin-top: 1.9rem;
+  }
+
+  .post-meta,
+  .post-tags {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+  }
+}
+
+blockquote {
+  border-left: 2px solid var(--accent-warm);
+  background: var(--surface-sunk);
+  font-style: italic;
+  border-radius: 0 3px 3px 0;
+}
+
+// Give displayed equations room to breathe.
+mjx-container[jax="CHTML"][display="true"] {
+  margin: 1.5rem 0 !important;
+}
+
+// Blog index reads as a contents list, not a table.
+.news .table th {
+  font-family: $mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--global-text-color-light);
+  font-weight: 400;
+  vertical-align: baseline;
+  padding-top: 1.1rem;
+}
+
+.news-title {
+  font-family: $serif-body;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+// ---------------------------------------------------------------------------
+// 9. Hero band (about page) — light/dark pair toggled by _themes.scss
+// ---------------------------------------------------------------------------
+
+.hero-band {
+  margin: 0 0 2.2rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.6rem 0 0.35rem;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-band-label {
+    font-family: $mono;
+    font-size: 0.66rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin: 0.4rem 0 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 10. Footer, social, misc
+// ---------------------------------------------------------------------------
+
+footer.fixed-bottom,
+footer.sticky-bottom {
+  border-top: 1px solid var(--rule);
+
+  .container {
+    font-family: $mono;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+  }
+}
+
+.social .contact-icons a {
+  color: var(--global-text-color-light);
+  transition: color 180ms ease;
+
+  &:hover {
+    color: var(--global-theme-color);
+  }
+}
+
+.social .contact-note {
+  font-family: $mono;
+  font-size: 0.75rem;
+  color: var(--global-text-color-light);
+}
+
+// Publications list
+.publications {
+  .title {
+    font-family: $serif-body;
+    font-weight: 600;
+  }
+
+  .periodical,
+  .author {
+    font-size: 0.92rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 11. Page-load reveal — one orchestrated moment, then nothing
+// ---------------------------------------------------------------------------
+
+@media (prefers-reduced-motion: no-preference) {
+  .post > header.post-header,
+  .post > article > .profile,
+  .post > article > .clearfix {
+    animation: plate-reveal 620ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .post > article > .profile {
+    animation-delay: 90ms;
+  }
+  .post > article > .clearfix {
+    animation-delay: 160ms;
+  }
+}
+
+@keyframes plate-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 12. Small screens
+// ---------------------------------------------------------------------------
+
+@media (max-width: 576px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  .post-header .post-title {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .profile .more-info {
+    font-size: 0.7rem;
+  }
+}
