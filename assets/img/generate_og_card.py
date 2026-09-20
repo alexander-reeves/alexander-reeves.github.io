@@ -249,8 +249,8 @@ def render_og(data, outfile):
 
 
 if __name__ == "__main__":
+    # The three-panel band this script used to draw was dropped when the about
+    # page moved to a photographic hero; only the Open Graph card is still used.
     print("running CAMB ...")
     data = compute_spectra()
-    render("light", data, "assets/img/hero_band_light.png")
-    render("dark", data, "assets/img/hero_band_dark.png")
     render_og(data, "assets/img/og_card.png")
