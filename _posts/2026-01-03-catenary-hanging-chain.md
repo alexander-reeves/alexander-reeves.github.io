@@ -1,16 +1,14 @@
 ---
 layout: post
-title: A hanging chain is not a parabola. A suspension bridge is.
+title: The shape of a hanging chain
 date: 2026-01-03 10:00:00
-description: Deriving the catenary two ways, and why the parabola is not a failed approximation but the exact answer to a different problem
+description: Deriving the catenary from a force balance and from energy minimisation, and comparing it with the parabola
 tags: [math, physics, calculus, variational-principles]
 ---
 
-Hang a chain between two points and it settles into a curve that looks like a parabola and isn't. It's a hyperbolic cosine — the catenary.
+A chain hanging between two points looks a lot like a parabola, but the curve is actually a hyperbolic cosine, called the catenary. In this post I derive it in two ways, first from a force balance and then by minimising the potential energy, and then compare it with the parabola.
 
-That distinction sounds like pedantry, and for a long time I filed it that way. It isn't, and the reason is the best thing about this problem. The parabola here is not a failed approximation to the chain. It is the _exact_ solution to a different problem, and which of the two curves you get depends on nothing more than how the weight is distributed along the thing that's hanging. A chain under its own weight gives you cosh. A suspension bridge gives you a parabola, exactly, with no approximation anywhere.
-
-So it's worth doing properly. Below: the shape from a force balance, the same shape from minimising energy, what the one free parameter means, and then the comparison that makes the distinction sharp.
+The comparison is the part I find most interesting. A cable carrying a load spread evenly along the horizontal, like the main cable of a suspension bridge, hangs in an exact parabola. The two curves come from the same equation with different load distributions.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -18,47 +16,47 @@ So it's worth doing properly. Below: the shape from a force balance, the same sh
     </div>
 </div>
 
-Take a chain of length $L$ and uniform mass per unit length $\rho$, and hang it from two points at the same height. The only assumption we need is that the chain is perfectly flexible and doesn't stretch. Flexible means it has no bending stiffness, so it can only pull along its own tangent — that's what makes the problem tractable. Everything else follows.
+Take a chain of length $L$ with uniform mass per unit length $\rho$ and hang it from two points at the same height. I will assume the chain is perfectly flexible, so it has no bending stiffness and can only pull along its own tangent, and that it does not stretch.
 
-## Balancing forces
+## Force balance
 
-Look at the piece of chain from the lowest point out to some point along the curve. Three forces act on it: the tension $T_0$ pulling back at the bottom, the tension $T_1$ pulling along the tangent at the far end, and its own weight hanging down.
+Consider the segment of chain between the lowest point and some point further along the curve. Three forces act on it. At the bottom there is a tension $T_0$, which is horizontal because the chain is flat there. At the other end there is a tension $T_1$ along the tangent, at an angle $\theta$ to the horizontal. The weight of the segment, $\rho g s$, acts downwards, where $s$ is its arc length.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/catenary_force_diagram.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Forces on the highlighted segment: $T_0$ at the bottom, $T_1$ along the tangent, and the weight $W$ of the segment." %}
+        {% include figure.liquid path="assets/img/catenary_force_diagram.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Forces on the highlighted segment: the tension $T_0$ at the bottom, the tension $T_1$ along the tangent, and the weight $W$." %}
     </div>
 </div>
 
-At the lowest point the chain is horizontal, so the tension there is purely horizontal. That's $T_0$, and it's the same everywhere — nothing has a horizontal force on it except the two tensions. Balancing horizontally and vertically:
+Balancing the horizontal and vertical components gives
 
 $$
-T_1 \cos\theta = T_0, \qquad T_1 \sin\theta = \rho g s ,
+T_1 \cos\theta = T_0, \qquad T_1 \sin\theta = \rho g s .
 $$
 
-where $s$ is the arc length of the segment. Divide, and $T_1$ disappears:
+The horizontal component of the tension is therefore $T_0$ at every point of the chain. Dividing the two equations removes $T_1$,
 
 $$
 \tan\theta = \frac{\rho g\, s}{T_0} .
 $$
 
-But $\tan\theta$ is just the slope, so
+The slope of the curve is $y' = \tan\theta$, so
 
 $$
 y' = \frac{s}{a}, \qquad a \equiv \frac{T_0}{\rho g} .
 $$
 
-That combination $a$ is the whole problem. Horizontal tension over weight per unit length — it has units of length, and it's the only parameter that appears anywhere.
+The length $a$, the horizontal tension divided by the weight per unit length, is the only parameter in the problem.
 
-The annoying part is that $s$ is an integral of the thing we're solving for, $s = \int_0^x\sqrt{1+y'^2}\,\mathrm{d}x'$. The fix is to differentiate, which turns the integral back into its integrand:
+Since $s = \int_0^x\sqrt{1+y'^2}\,\mathrm{d}x'$, differentiating with respect to $x$ gives an equation for $y$ alone,
 
 $$
 y'' = \frac{1}{a}\sqrt{1 + y'^2} .
 $$
 
-## The same thing, from energy
+## Energy minimisation
 
-The chain settles into whatever shape minimises its potential energy, subject to being a fixed length. That's a constrained variational problem:
+The same equation follows from minimising the gravitational potential energy of the chain at fixed length,
 
 $$
 U = \rho g \int y \sqrt{1 + y'^2}\, \mathrm{d}x
@@ -66,147 +64,128 @@ U = \rho g \int y \sqrt{1 + y'^2}\, \mathrm{d}x
 \int \sqrt{1 + y'^2}\, \mathrm{d}x = L .
 $$
 
-Throw in a Lagrange multiplier $\lambda$, drop the overall $\rho g$, and you're extremising something with integrand
+Adding a Lagrange multiplier $\lambda$ for the length constraint and dropping the overall factor of $\rho g$, the integrand to extremise is
 
 $$
 F(y, y') = (y + \lambda)\sqrt{1 + y'^2} .
 $$
 
-Now, $F$ doesn't depend on $x$ explicitly. That's worth noticing, because it means the Euler–Lagrange equation has a first integral — the Beltrami identity, $F - y'\,\partial F/\partial y' = \text{const}$. (If you've done Lagrangian mechanics this is the same statement as energy conservation for a time-independent Lagrangian, with $x$ playing the part of time. I find it easier to remember that way than as a separate result.)
-
-Grinding through it, the $\sqrt{1+y'^2}$ terms collapse rather nicely:
+$F$ has no explicit dependence on $x$, so the Euler-Lagrange equation has the first integral $F - y'\,\partial F/\partial y' = \text{const}$, known as the Beltrami identity. It is the same statement as energy conservation for a Lagrangian with no explicit time dependence, with $x$ in place of time. Substituting $F$,
 
 $$
 (y + \lambda)\sqrt{1 + y'^2} - \frac{(y+\lambda)\,y'^2}{\sqrt{1 + y'^2}}
 = \frac{y + \lambda}{\sqrt{1 + y'^2}} = \text{const} .
 $$
 
-Call that constant $a$, shift the origin to absorb $\lambda$, differentiate once, and you land on exactly the equation from the force balance.
+Calling the constant $a$ and differentiating once more gives the force-balance equation again, with $y$ shifted by $\lambda$. The multiplier has a physical meaning as well. As shown in the section on tension below, $\rho g (y + \lambda)$ is the tension at each point of the chain.
 
-The two routes agreeing is not a surprise, but comparing them tells you something neither gives alone: the Lagrange multiplier that enforces the length constraint _is_ the horizontal tension. Which makes sense — tension is the chain's way of refusing to stretch.
+## Solving the equation
 
-## Actually solving it
-
-Set $p = y'$. The equation separates:
+Writing $p = y'$, the equation separates,
 
 $$
 \frac{\mathrm{d}p}{\sqrt{1+p^2}} = \frac{\mathrm{d}x}{a}
-\;\Longrightarrow\;
+\quad\Longrightarrow\quad
 \sinh^{-1}p = \frac{x}{a} ,
 $$
 
-taking the lowest point at $x=0$ where $p=0$. So $y' = \sinh(x/a)$, and integrating,
+where I have put the lowest point at $x = 0$, where $p = 0$. Then $y' = \sinh(x/a)$ and
 
 $$
 y = a \cosh\!\left(\frac{x}{a}\right) .
 $$
 
-The constant of integration has been spent putting the origin a distance $a$ _below_ the bottom of the chain. That horizontal line is the **directrix**, and it's worth measuring from — it's what makes the rest of the formulae come out clean rather than cluttered with offsets.
+I have used the constant of integration to put the origin a distance $a$ below the lowest point of the chain. This horizontal line is called the **directrix**, and measuring heights from it keeps the later formulae simple. With this choice, $a$ is also the height of the lowest point above the directrix, and the radius of curvature there. Increasing the tension increases $a$ and makes the chain flatter.
 
-So $a$ is three things at once: the ratio of tension to weight, the height of the vertex above the directrix, and the radius of curvature at the vertex. Pull harder, $a$ grows, the chain flattens.
-
-There's also only one catenary. Since $y/a = \cosh(x/a)$, changing $a$ rescales both axes by the same factor — every catenary is a magnified copy of every other one. That's exactly why it can masquerade as a parabola over a limited stretch.
+All catenaries have the same shape up to a change of scale, because $y/a = \cosh(x/a)$ and changing $a$ stretches both axes by the same factor.
 
 {% include figure_themed.liquid
    base="assets/img/catenary_family" ext="png" zoomable=true
    alt="A family of catenary curves y = a cosh(x/a) for a between 0.4 and 4.0, coloured by a, with the directrix marked"
-   caption="The family $y = a\cosh(x/a)$. The vertex of each curve sits at $y = a$ above the directrix." %}
+   caption="The family $y = a\cosh(x/a)$. The lowest point of each curve is at height $a$ above the directrix." %}
 
-## The part that isn't elegant
+## Fixing $a$ from the span and the length
 
-In a real problem you don't know $a$. You know the span and how much chain you've got. Hang it between $x = \pm b$ with total length $L$; the arc length integral is unusually kind, because $\sqrt{1+\sinh^2 u} = \cosh u$:
+In practice we know the span and the length of the chain rather than $a$. For supports at $x = \pm b$, the length is
 
 $$
-L = \int_{-b}^{b}\cosh\!\left(\frac{x}{a}\right)\mathrm{d}x = 2a\sinh\!\left(\frac{b}{a}\right) .
+L = \int_{-b}^{b}\cosh\!\left(\frac{x}{a}\right)\mathrm{d}x = 2a\sinh\!\left(\frac{b}{a}\right) ,
 $$
 
-With $u = b/a$ that's
+using $\sqrt{1+\sinh^2 u} = \cosh u$. With $u = b/a$ this becomes
 
 $$
 \frac{\sinh u}{u} = \frac{L}{2b} .
 $$
 
-And that's where it stops being pretty. The left side climbs monotonically from 1, so there's exactly one solution whenever the chain is longer than the gap — but you cannot write it down. You solve it numerically and move on. Every textbook glides over this; it's the only genuinely ugly step in an otherwise very tidy problem.
-
-Once you have $a$, the sag is $a[\cosh(b/a) - 1]$.
+The left-hand side increases monotonically from 1, so there is a single solution whenever $L > 2b$. It has no closed form and has to be found numerically. Once $a$ is known, the sag is $a[\cosh(b/a) - 1]$.
 
 {% include figure_themed.liquid
    base="assets/img/catenary_sag" ext="gif" zoomable=true
-   alt="Animation of a chain sagging further as more chain is paid out over a fixed span, next to a plot of sag over span against length over span"
-   caption="Paying out more chain over a fixed span, solving for $a$ numerically at each frame." %}
+   alt="Animation of a chain sagging further as more chain is let out over a fixed span, next to a plot of sag over span against length over span"
+   caption="More chain is let out over a fixed span, with $a$ found numerically for each frame." %}
 
-Watch the start of that animation. The sag shoots up and then crawls. Expanding for a nearly taut chain, $\sinh u/u \approx 1 + u^2/6$, so $u \approx \sqrt{6\,\epsilon}$ where $\epsilon$ is the fractional excess length — the sag goes like the _square root_ of how much extra chain you have.
+For a chain only slightly longer than the span, $\sinh u / u \approx 1 + u^2/6$, so $u \approx \sqrt{6\epsilon}$, where $\epsilon = L/2b - 1$ is the fractional excess length. The sag therefore grows like $\sqrt{\epsilon}$, which is why it rises so quickly at the start of the animation. A cable 1% longer than its span sags by about 6% of the span. This is why the tension in overhead power lines has to be set carefully, and why they sag more on hot days. A temperature rise of 30 K lengthens a steel cable by a few hundredths of a percent, and the square root turns that into a visible extra sag.
 
-Put numbers on it: a cable strung 1% longer than its span sags about 6% of the span. That factor of six is why power lines are tensioned so fussily, and why they droop visibly on a hot day. Steel expands by something like $10^{-5}$ per degree; thirty degrees of summer buys you a few hundredths of a percent in length, and the square root turns that into centimetres of extra sag. Transmission line clearances are set with exactly this calculation.
+## Comparison with the parabola
 
-## Where Galileo's parabola actually lives
-
-Expand the cosh:
+Expanding the hyperbolic cosine,
 
 $$
 y = a + \frac{x^2}{2a} + \frac{x^4}{24a^3} + \cdots
 $$
 
-For a shallow chain, $\lvert x \rvert \ll a$, the first term past the constant is a parabola and the correction is suppressed by $x^2/12a^2$.
-
-Which is worth a short historical aside, because Galileo is usually blamed for getting this wrong and he didn't. Here he is, in the Fourth Day:
-
-> Besides I must tell you something which will both surprise and please you, namely, that a cord stretched more or less tightly assumes a curve which closely approximates the parabola. [...] the coincidence is more exact in proportion as the parabola is drawn with less curvature or, so to speak, more stretched; so that using parabolas described with elevations less than 45° the chain fits its parabola almost perfectly.
->
-> — Galileo, _Two New Sciences_ (1638), Fourth Day, trans. Crew & de Salvio, [p. 310](https://galileoandeinstein.phys.virginia.edu/tns_draft/tns_280to295.html)
-
-"Closely approximates", not "is". And the qualification is the $x^2/12a^2$ above, stated in words: less curvature means larger $a$, and the error falls as $1/a^2$. He even gives a threshold — under 45° it "fits almost perfectly". The usual charge against him seems to come from the next line, where Sagredo points out you could use a chain to _draw_ parabolas, which is a remark about draughtsmanship rather than a claim about curves.
-
-The exact shape had to wait: Jungius showed it wasn't a parabola before his death in 1657 (published 1669), Huygens knew by 1646 at seventeen, and the closed form came in 1691, after Jakob Bernoulli set it as a public challenge and Huygens, Leibniz and Johann Bernoulli each solved it inside a year. Huygens named it _catenaria_, from the Latin for chain.
+For $\lvert x \rvert \ll a$ the leading term after the constant is a parabola, and the next correction is smaller by a factor $x^2/12a^2$. A shallow chain is therefore very close to a parabola, and the difference grows as the chain sags more.
 
 {% include figure_themed.liquid
    base="assets/img/catenary_vs_parabola" ext="png" zoomable=true
    alt="Three panels comparing a catenary with a parabola of the same span and sag, at length-to-span ratios of 1.02, 1.30 and 2.20, with residual panels"
-   caption="Catenary against a parabola with the same span and sag. At $L/\mathrm{span}=1.02$ they differ by 0.2% of the sag; by 2.20 it's about 10%." %}
+   caption="Catenary and parabola with the same span and sag. The largest difference is 0.2% of the sag for $L/\mathrm{span} = 1.02$ and about 10% for $L/\mathrm{span} = 2.2$." %}
 
-But here's the bit I actually like. Go back to the force balance and change one thing: suppose the weight is distributed uniformly per unit _horizontal distance_ rather than per unit _arc length_. Then the weight of the segment is $wx$ instead of $\rho g s$, and
+Galileo described this approximation in _Two New Sciences_ (1638). In the Fourth Day he writes:
+
+> Besides I must tell you something which will both surprise and please you, namely, that a cord stretched more or less tightly assumes a curve which closely approximates the parabola. [...] the coincidence is more exact in proportion as the parabola is drawn with less curvature or, so to speak, more stretched; so that using parabolas described with elevations less than 45° the chain fits its parabola almost perfectly.
+
+(Galileo, _Two New Sciences_, Fourth Day, translated by H. Crew and A. de Salvio, [p. 310](https://galileoandeinstein.phys.virginia.edu/tns_draft/tns_280to295.html).) He is often described as having claimed that the chain is exactly a parabola. In this passage he calls it an approximation that improves as the curve gets flatter, which agrees with the $x^2/12a^2$ correction above. The exact curve was found in 1691 by Huygens, Leibniz and Johann Bernoulli, in response to a challenge set by Jakob Bernoulli.
+
+Now change the load. Suppose the weight is spread uniformly along the horizontal, $w$ per unit length in $x$, instead of uniformly along the chain. The weight of the segment is then $wx$ rather than $\rho g s$, and the force balance gives
 
 $$
 y' = \frac{w\,x}{T_0} \quad\Longrightarrow\quad y = \frac{w\,x^2}{2T_0} ,
 $$
 
-a parabola, exactly, with no approximation anywhere.
+which is an exact parabola. This is a good model for a suspension bridge, where the deck hangs from the main cable and is much heavier than the cable itself. The main cables of a suspension bridge are therefore close to parabolic, while a chain hanging under its own weight is a catenary.
 
-That's not a contrived case. It's a suspension bridge: the roadway deck hangs from the main cable and vastly outweighs it, so the load really is uniform per unit horizontal distance. The main cables of the Golden Gate are parabolas. A chain hanging under nothing but its own weight is a catenary. Same equation, two different load distributions, two different curves — and the shape tells you which.
+## Tension along the chain
 
-## Tension is just height
-
-One more result, close to free. Since $T = T_0/\cos\theta$ and $\cos\theta = 1/\cosh(x/a)$,
+Since $T = T_0/\cos\theta$ and $\cos\theta = 1/\cosh(x/a)$,
 
 $$
 T(x) = T_0\cosh\!\left(\frac{x}{a}\right) = \rho g\, y .
 $$
 
-The tension anywhere on the chain is $\rho g$ times its height above the directrix. Not the arc length to that point, not the span, not how much chain is hanging below — just the height. Two points level with each other carry identical tension no matter what the chain does in between.
+The tension at any point equals $\rho g$ times the height of that point above the directrix. This is the combination $\rho g(y + \lambda)$ from the energy calculation, with heights now measured from the directrix. Two points at the same height carry the same tension. The tension is largest at the supports, where it is larger than at the bottom by a factor $\cosh(b/a)$.
 
 {% include figure_themed.liquid
    base="assets/img/catenary_tension" ext="png" zoomable=true
    alt="A chain coloured by its tension, next to a plot showing tension is exactly linear in height above the directrix"
-   caption="Tension along the chain, and the relation $T = \rho g y$. The right-hand panel looks trivial, which is the point." %}
+   caption="Tension along the chain, and the linear relation $T = \rho g y$." %}
 
-This is also why chains part at the top. The supports are the highest points, so they carry the most tension, larger than at the bottom by $\cosh(b/a)$.
+## Arches
 
-## Upside down
+Turning a catenary upside down changes every tension into a compression of the same size. Masonry is strong in compression and weak in tension, so an inverted catenary is a natural shape for an arch that carries its own weight. Robert Hooke stated this in 1675 as a Latin anagram, which decodes to _"as hangs the flexible line, so but inverted will stand the rigid arch"_. Antoni Gaudí used the same idea for the Colònia Güell chapel, which he designed with an upside-down model made of strings loaded with small weights.
 
-Flip a catenary and every tension becomes a compression. Masonry is hopeless in tension and excellent in compression, so an inverted catenary is the arch shape that stands up with no bending anywhere in it.
+## Extensions
 
-Hooke knew this in 1675 and published it as an anagram — a way of claiming priority without telling anyone the answer, which was apparently normal behaviour at the time. Decoded, it reads _"as hangs the flexible line, so but inverted will stand the rigid arch"_.
+- **Unequal support heights.** The solution is still $y = a\cosh((x - x_0)/a)$, with $x_0$ as an extra unknown. If the difference in height is large enough, the lowest point lies outside the span and the chain is never horizontal.
+- **Non-uniform density.** The equation changes and the solution is no longer a hyperbolic cosine. A well-known case is the catenary of equal strength, where the cross-section is tapered so that the stress is the same everywhere. Its shape is $y = -a\ln\cos(x/a)$, which has vertical asymptotes at $x = \pm\pi a/2$, so there is a maximum possible span.
+- **Elastic chains.** If the chain stretches under tension, the arc length depends on the tension. This is the elastic catenary, which is the relevant case for real steel cables.
 
-Gaudí took it literally. For the Colònia Güell chapel he built the whole structure upside down out of string weighted with birdshot, let gravity find the shape, photographed it, and turned the photograph over. An analogue computer for a problem that has no closed-form solution — which, given the transcendental equation above, is a more reasonable approach than it sounds.
+## References
 
-## If you want to push further
+- E. H. Lockwood, _A Book of Curves_ (Cambridge University Press, 1961).
+- E. W. Weisstein, [Catenary](https://mathworld.wolfram.com/Catenary.html), MathWorld.
+- V. I. Arnold, _Mathematical Methods of Classical Mechanics_, for the Beltrami identity.
+- Galileo Galilei, _Dialogues Concerning Two New Sciences_ (1638), translated by H. Crew and A. de Salvio.
 
-The symmetric equal-height chain is the easy case. Three directions out:
-
-- **Unequal supports.** Still $y = a\cosh((x-x_0)/a)$, you've just lost the symmetry that put the vertex at the origin. Two unknowns now, fixed by the two endpoints and the length. The vertex can end up outside the span entirely, in which case the chain is never horizontal anywhere.
-- **Non-uniform density.** The cosh dies immediately. The nicest special case is the _catenary of equal strength_, where you taper the cross-section so the stress is constant along the chain; that gives $y = -a\ln\cos(x/a)$, which has vertical asymptotes and so a maximum possible span.
-- **Stretch.** Let the chain be elastic and the arc length becomes an unknown function of the tension. This is what you need for real steel cable, and it's much less fun.
-
-For the classical material, Lockwood's _A Book of Curves_ has a good short chapter, and [MathWorld](https://mathworld.wolfram.com/Catenary.html) collects the standard results including the catenoid. For the Beltrami identity in its natural home, Arnold's _Mathematical Methods of Classical Mechanics_.
-
-The two diagrams at the top came out of [a notebook](https://github.com/alexander-reeves/alexander-reeves.github.io/blob/master/assets/jupyter/catenary_diagram.ipynb) and everything below them from [this script](https://github.com/alexander-reeves/alexander-reeves.github.io/blob/master/assets/img/generate_catenary_figures.py). Change the numbers and see what happens.
+The two diagrams at the top were made in [this notebook](https://github.com/alexander-reeves/alexander-reeves.github.io/blob/master/assets/jupyter/catenary_diagram.ipynb), and the other figures with [this script](https://github.com/alexander-reeves/alexander-reeves.github.io/blob/master/assets/img/generate_catenary_figures.py).

@@ -6,10 +6,10 @@ description: End-to-end, differentiable pipelines combining CMB and LSS probes f
 importance: 1
 banner: banner_legacy_survey.jpg
 banner_alt: Messier 96 imaged by the DESI Legacy Imaging Surveys
-banner_credit: "M96 in the DESI Legacy Imaging Surveys — the imaging data behind Reeves et al. (2025b). Credit: DESI Legacy Imaging Surveys/LBNL/DOE & KPNO/CTIO/NOIRLab/NSF/AURA"
+banner_credit: "M96 in the DESI Legacy Imaging Surveys, the imaging data used in Reeves et al. (2025b). Credit: DESI Legacy Imaging Surveys/LBNL/DOE & KPNO/CTIO/NOIRLab/NSF/AURA"
 ---
 
-During my PhD, I built an end-to-end, differentiable pipeline that combines multiple cosmological probes—weak lensing, galaxy clustering, BAO, CMB primary anisotropies, integrated Sachs-Wolfe effect, and CMB lensing—in a single, self-consistent inference framework. This includes simulation-based covariances, fast emulators, and cross-correlation measurements to maximise information while controlling systematics across datasets.
+During my PhD, I built an end-to-end, differentiable pipeline that combines multiple cosmological probes (weak lensing, galaxy clustering, BAO, CMB primary anisotropies, the integrated Sachs-Wolfe effect and CMB lensing) in a single, self-consistent inference framework. This includes simulation-based covariances, fast emulators, and cross-correlation measurements to maximise information while controlling systematics across datasets.
 
 The pipeline was first developed and validated on mock data in [Reeves et al. (2024)](https://arxiv.org/abs/2309.03258), then applied to real data in [Reeves et al. (2025a)](https://arxiv.org/abs/2502.01722), where we explored neutrino mass constraints and dynamical dark energy. Most recently, the framework has been extended to DESI Legacy Imaging Survey data in [Reeves et al. (2025b)](https://arxiv.org/abs/2510.06114), where we compared early and late-time dark energy models.
 

@@ -1,5 +1,5 @@
 # Repository cards are rendered natively from this file by
-# _includes/repository/repo.liquid — no third-party badge service, which the
+# _includes/repository/repo.liquid, without the third-party badge service the
 # template used to depend on (github-readme-stats, currently offline).
 #
 # Add a repo by adding an entry here. `description` is shown verbatim, so it
@@ -42,6 +42,6 @@ repos:
   - name: ufalcon-published
     owner: cosmo_public
     url: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published
-    description: UFalcon — rapid post-processing of N-body output into full-sky maps for several cosmological probes.
+    description: UFalcon, for fast post-processing of N-body output into full-sky maps for several cosmological probes.
     language: Python
     host: gitlab

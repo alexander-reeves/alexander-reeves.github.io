@@ -9,7 +9,7 @@ nav_order: 7
 
 ## Supervision
 
-I'm happy to hear from students interested in combined-probe cosmology, large-scale structure theory, or the computational side of cosmological inference — emulators, differentiable pipelines, simulation-based methods. Email is the best way to reach me.
+I am happy to hear from students interested in combined-probe cosmology, large-scale structure theory, or computational methods for cosmological inference such as emulators and differentiable pipelines. Email is the best way to reach me.
 
 Students I supervised or co-supervised during my PhD at ETH Zürich:
 
@@ -22,7 +22,7 @@ Students I supervised or co-supervised during my PhD at ETH Zürich:
 | Luca Morf                                                      | Master thesis, co-supervisor | 2022–23 | Field-level simulations from the effective field theory of large-scale structures          |
 | [Luis Machado Poletti Valle](https://arxiv.org/abs/2309.03258) | Semester project, supervisor | 2022    | The integrated Sachs–Wolfe effect on the lightcone                                         |
 
-Two of these turned into papers: Laura's work became [SwiftC$_\ell$](https://arxiv.org/abs/2505.22718), and Luis's contributed to the [12×2pt combined-probe analysis](https://arxiv.org/abs/2309.03258).
+Two of these projects led to papers. Laura's work became [SwiftC$_\ell$](https://arxiv.org/abs/2505.22718), and Luis's contributed to the [12×2pt combined-probe analysis](https://arxiv.org/abs/2309.03258).
 
 ## Courses
 
@@ -37,4 +37,4 @@ At ETH Zürich:
 
 ## For school students
 
-If you're at school rather than at university, my page of [books and resources]({{ '/advice/' | relative_url }}) is probably more useful — and I'm happy to talk about Oxbridge interviews by email.
+If you're at school rather than at university, my page of [books and resources]({{ '/advice/' | relative_url }}) is probably more useful. I am also happy to answer questions about Oxbridge interviews by email.
